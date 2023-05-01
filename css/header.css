@@ -452,28 +452,40 @@ html.visible{
     width: 20px;
     height: 25px;
  }
- .links ul{
+ .links .pages{
     display: flex;
     flex: 1;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    position: relative;
+ }
+ .links .pages li{
+    position: relative;
  }
  .links ul li a{
-    color: var(--search-color-placehoder);
+    color: var(--text-color);
     font-weight: 500;
     display: flex;
     align-items: center;
     gap: .5rem;
  }
-.category li:hover a span::before{
+.category li:hover a span::before,
+.sub-categ li:hover a::before,
+.lists-veg ul li:hover a::before
+{
     width: 50%;
  }
  .category span{
     font-weight: 600;
     position: relative;
  }
- .category span::before{
+ .links .category li a{
+    color: var(--search-color-placehoder);
+ }
+ .category span::before,
+ .sub-categ li a::before,
+ .lists-veg ul li a::before{
     content: '';
     width: 0%;
     height: 3px;
@@ -482,6 +494,9 @@ html.visible{
     left: 0;
     bottom: 0;
     transition: .3s;
+ }
+ .sub-categ li a::before{
+    bottom: 6px;
  }
  .inside-category{
     display: flex;
@@ -492,6 +507,7 @@ html.visible{
     left: 130%;
     width: fit-content;
     height: 100%;
+    z-index: 2;
  }
  .inside-category h3{
     color: var(--text-color);
@@ -530,6 +546,12 @@ html.visible{
  }
  .links .pages li a:hover span{
     color: var(--primary-color);
+ }
+ .links .pages li:hover  ul,
+ .links .pages li:hover  .lists-veg {
+    opacity: 1;
+    top: 2.5rem;
+    visibility: visible;
  }
  .links ul li a:hover svg path{
     fill: var(--primary-color);
@@ -696,15 +718,77 @@ html.visible{
     border-radius: 100vw;
     width: 3px;
   }
+.sub-categ{
+    position: absolute;
+    display: block;
+    background: white;
+    box-shadow: 0px 0px 9px -3px #c2c0c0;
+    padding: 1rem;
+    border-radius: 4px;
+    top: 1rem;
+    opacity: 0;
+    visibility: hidden;
+}
+.sub-categ li{
+    font-size: 15px;
+    padding: 8px 0;
+    width: 150px;
+}
+.lists-veg{
+    position: absolute;
+    display: flex;
+    gap: 4rem;
+    top: 2rem;
+    width: 90%;
+    left: 50%;
+    translate: -50%;
+    padding: 1.5rem 1rem;
+    background: url("../img/megamenu.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    background-color: white;
+    box-shadow: 0px 0px 9px -3px #c2c0c0;
+    opacity: 0;
+    visibility: hidden;
+}
+.lists-veg ul h4{
+    color: var(--primary-color);
+    font-size: 16px;
+    margin-bottom: 1rem;
+    width: 150px;
+}
+.lists-veg ul li {
+    margin: 1rem 0;
+}
+.lists-veg ul li a{
+    font-size: 14px;
+    text-align: start;
+}
+.links .pages li:nth-child(5){
+    position: unset;
+}
+.links .pages .lists-veg li:nth-child(5),
+    .links .pages .sub-categ li:nth-child(5){ 
+    position: relative;
+}
+/* .links .lists-veg li a ,
+.links .sub-categ li a{
+    letter-spacing: 0;
+} */
+.links .lists-veg li:hover a ,
+.links .sub-categ li:hover a{
+    letter-spacing: .5px;
+}
 @media (max-width:1500px){
     .control-box .deliver-num,
     .control-box a:last-child .my-account
     {
         display: none;
     }
-    .links ul {
+    .links .pages {
 
-        gap: .4rem;
+        gap: 1.4rem;
     }
 }
 @media (max-width:1200px){
