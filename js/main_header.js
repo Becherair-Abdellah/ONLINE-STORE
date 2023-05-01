@@ -33,7 +33,7 @@ function langContent() {
         if (i == 0) {
             let ln1 = document.createElement('li');
             let img1 = document.createElement('img')
-            img1.src = "static/img/10002.png";
+            img1.src = " /img/10002.png";
             let h4one = document.createElement('h4');
             h4one.innerText = 'english';
             ln1.appendChild(img1);
@@ -46,7 +46,7 @@ function langContent() {
         if (i == 1) {
             let ln1 = document.createElement('li');
             let img1 = document.createElement('img')
-            img1.src = "static/img/10005.png";
+            img1.src = " /img/10005.png";
             let h4one = document.createElement('h4');
             h4one.innerText = 'turki';
             ln1.appendChild(img1);
@@ -59,7 +59,7 @@ function langContent() {
         if (i == 2) {
             let ln1 = document.createElement('li');
             let img1 = document.createElement('img')
-            img1.src = "static/img/10004.png";
+            img1.src = " /img/10004.png";
             let h4one = document.createElement('h4');
             h4one.innerText = 'Germany';
             ln1.appendChild(img1);
@@ -228,4 +228,3 @@ function cityDelivery() {
     div.appendChild(btnclose);
     document.querySelector('body').appendChild(div);
 }
-console.log('now is abdellah becherair');
