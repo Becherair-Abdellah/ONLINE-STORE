@@ -281,23 +281,26 @@ html.visible{
 .control-box a span{
     display: block;
 }
-.control-box a{
+.control-box li{
     display: flex;
     position: relative;
     align-items: center;
     gap: .5rem;
 }
-.control-box a:first-child{
+.control-box li{
+    cursor: pointer;
+}
+.control-box li:first-child{
     display: none;
 }
-.control-box a:not(:last-child){
+.control-box li:not(:last-child){
     padding-right: 1rem;;
     margin-right: 1rem;;
 }
-.control-box a svg{
+.control-box li svg{
     width: 28px;
 }
-.control-box a:not(:last-child)::before{
+.control-box li:not(:last-child)::before{
     content: '';
     width: 1px;
     height: 25px;
@@ -780,6 +783,104 @@ html.visible{
 .links .sub-categ li:hover a{
     letter-spacing: .5px;
 }
+.recent-products{
+    position: absolute;
+    top: 40px;
+    left: -285px;
+    background-color: white;
+    width: 335px;
+    padding: 1rem;
+    box-shadow: 0px 0px 9px -3px #c2c0c0;
+    border-radius: 5px;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+}
+.recent-products .box-product{
+    position: relative;
+}
+.recent-products a{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.4rem;
+    position: relative;
+}
+.recent-products .products img{
+    width: 50px;
+}
+.recent-products .products .img{
+    background-color: #ebebeb;
+    padding: 14px 24px 6px 18px;
+    border-radius: 3px;
+}
+.recent-products .info{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.recent-products .descrp{
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+.recent-products .pricing{
+    color: #2e2e2e;
+    font-size: 15px;
+    display: flex;
+    text-transform: lowercase;
+}
+.recent-products .products{
+    border-bottom: 1px solid #ededed;
+}
+.recent-products .price-pr{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    font-size: 20px;
+}
+.recent-products .price-pr div{
+    color: var(--primary-color);
+    font-weight: bold;
+}
+.recent-products .buy-pr{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0 0;
+    align-items: center;
+}
+.recent-products .buy-pr a:first-child{
+    color: var(--primary-color);
+    border-radius: 3px;
+    border: 2px solid var(--primary-color);
+    padding: .5rem .7rem;
+}
+.recent-products .buy-pr a:first-child:hover{
+    background: var(--primary-color);
+    color: white;
+}
+.recent-products .buy-pr a:last-child{
+    background-color: var(--primary-color);
+    padding: .5rem .7rem;
+    border-radius: 3px;
+    color: white;
+}
+#rm-pr{
+    display: block;
+    position: absolute;
+    top: 0.5rem;
+    right: .5rem;
+    cursor: pointer;
+}
+#rm-pr svg{
+    width: 24px;
+}
+.control-box li:nth-child(4):hover .recent-products{
+    opacity: 1;
+    visibility: visible;
+    top: 51px;
+}
+
 @media (max-width:1500px){
     .control-box .deliver-num,
     .control-box a:last-child .my-account
