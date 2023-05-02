@@ -126,12 +126,12 @@ function coin() {
 }
 // show menu bar in small screen when user click at bars
 let bars = document.getElementById('bars');
-let close = document.querySelectorAll('#close');
-console.log(close);
-const button = close;
+let close = document.querySelector('#close');
+const button = [bars, close];
 const menu = document.querySelector('.pages');
 const overlay = document.querySelector('.overlay');
 // when click at overlay hide menu 
+const btnP = document.querySelector('.Today');
 overlay.onclick = () => {
     menu.classList.remove('visible');
     document.querySelector('html').classList.remove('visible');
@@ -140,12 +140,16 @@ overlay.onclick = () => {
         document.querySelector(".my-location") ? document.querySelector(".my-location").remove() : "";
         overlay.classList.remove('visible');
     }, 140);
+    // deal today
+    document.querySelector('.my-product') ? document.querySelector('.my-product').classList.remove('animate') : "";
+    setTimeout(() => {
+        document.querySelector('.my-product') ? document.querySelector('.my-product').remove() : "";
+        overlay.classList.remove('visible');
+    }, 140);
 
 }
 button.forEach((btn) => {
-    btn.onclick = (e) => {
-        e.preventDefault();
-        console.log('press');
+    btn.onclick = () => {
         menu.classList.toggle('visible');
         overlay.classList.toggle('visible');
         document.querySelector('html').classList.toggle('visible');
@@ -160,7 +164,7 @@ getArea.onclick = () => {
     cityDelivery();
     setTimeout(() => {
         document.querySelector(".my-location").classList.add('animate');
-    }, 0)
+    }, 0);
 }
 function cityDelivery() {
     let areas = ["Alabama", "Arizona", "California", "Colorado", "Florida", "Georgia"
@@ -289,17 +293,67 @@ class Product {
     }
 };
 // when pull the data from server in build the product
-for(let i =0;i<2;i++){
+for (let i = 0; i < 2; i++) {
     let myProduct = new Product('/img/10028.png', 'chips playing', 340, 23, parent);
     myProduct.createProduct();
 }
-// dealtoday function to show recomended products
-const btnP= document.querySelector('.Today');
-btnP.onclick = (e)=>{
+btnP.onclick = (e) => {
     e.preventDefault();
+    overlay.classList.add('visible');
+    setTimeout(() => {
+        document.querySelector(".my-product").classList.add('animate');
+    }, 0);
     recomenedProduct();
-} 
-function recomenedProduct(){
+}
+class RecentProduct {
+    constructor(imgP, descrp, price, deduct, weight,newparent) {
+        this.imgP = imgP;
+        this.descrp = descrp;
+        this.price = price;
+        this.deduct = deduct;
+        this.weight = weight;
+        this.newparent = newparent;
+    }
+    // cretae Product
+    createProduct() {
+        const product = document.createElement('div');
+        product.classList = 'rcemnd-product';
+        let img = document.createElement('div');
+        img.classList = 'img';
+        let imgp = document.createElement('img');
+        imgp.classList = 'imgProduct';
+        imgp.src = this.imgP;
+        img.appendChild(imgp);
+        product.appendChild(img);
+        const infop = document.createElement('div');
+        infop.classList = 'info';
+        const descrp = document.createElement('span');
+        descrp.innerText = this.descrp;
+        descrp.classList = 'descrp bold';
+        infop.appendChild(descrp);
+        const infoProd = document.createElement('div');
+        infoProd.classList = 'infoProd';
+        const text = document.createTextNode('$');
+        infoProd.appendChild(text);
+        const price = document.createElement('span');
+        price.id = 'price';
+        price.innerText = this.price;
+        const mydeduct = document.createElement('span');
+        mydeduct.classList = 'deduct';
+        mydeduct.innerText = this.deduct;
+        const weightPr = document.createElement('span');
+        weightPr.classList = 'weight';
+        weightPr.innerText = `${this.weight}G`;
+        infoProd.appendChild(price);
+        infoProd.appendChild(mydeduct);
+        infoProd.appendChild(weightPr);
+        infop.appendChild(infoProd);
+        product.appendChild(infop);
+        this.newparent.appendChild(product);
+        console.log(this.newparent);
+    }
+}
+function recomenedProduct() {
     let div = document.createElement('div');
     // my-location
     div.classList = 'my-product';
@@ -314,22 +368,25 @@ function recomenedProduct(){
     text.appendChild(h5);
     div.appendChild(text);
     document.querySelector('body').appendChild(div);
-
-
-
-
-        // btn close 
-        let btnclose = document.createElement('button');
-        btnclose.id = 'close';
-        btnclose.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Close</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"></path></svg>`;
-        btnclose.onclick = () => {
-            menu.classList.remove('visible');
-            document.querySelector('html').classList.remove('visible');
-            document.querySelector(".my-product") ? document.querySelector(".my-product").classList.remove('animate') : "";
-            setTimeout(() => {
-                document.querySelector(".my-product") ? document.querySelector(".my-product").remove() : "";
-                overlay.classList.remove('visible');
-            }, 140);
-        }
+    const contentPr = document.createElement('div');
+    contentPr.classList = 'content-prd';
+    div.appendChild(contentPr);
+    for(let i=0;i<4;i++){
+        let newProduct = new RecentProduct('/img/10028.png','this is my product',i+23.43,30.50,300,contentPr);
+        newProduct.createProduct();
+    }
+    // btn close 
+    let btnclose = document.createElement('button');
+    btnclose.id = 'close';
+    btnclose.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Close</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"></path></svg>`;
+    btnclose.onclick = () => {
+        menu.classList.remove('visible');
+        document.querySelector('html').classList.remove('visible');
+        document.querySelector(".my-product") ? document.querySelector(".my-product").classList.remove('animate') : "";
+        setTimeout(() => {
+            document.querySelector(".my-product") ? document.querySelector(".my-product").remove() : "";
+            overlay.classList.remove('visible');
+        }, 140);
+    }
     div.appendChild(btnclose);
 }
