@@ -949,6 +949,14 @@ html.visible{
 .rcemnd-product:nth-child(3){
     background: #ffa53b4a;
 }
+.mobile{
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block;
+}
+.mobile-f{
+    display: flex;
+}
 @media (max-width:1500px){
     .control-box .deliver-num,
     .control-box a:last-child .my-account
@@ -977,7 +985,9 @@ html.visible{
         width: 300px;
         bottom: 0;
         background: white;
-        z-index: 1;
+        z-index: 2;
+        overflow: hidden;
+        overflow-y: visible;
     }
     .links .pages.visible{
         left: 0;
@@ -1000,6 +1010,61 @@ html.visible{
         justify-content: space-between;
         font-weight: 700;
     }
+    .sub-categ{
+        position: relative;
+        box-shadow: none;
+        padding: 0;
+        top: 0 !important;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+    }
+    .sub-categ li{
+        padding: 0.3rem 0 !important;
+    }
+    .sub-categ li a{
+        font-weight: normal !important ;
+    }
+    .sub-categ li a::before{
+        display: none;
+    }
+    .links .sub-categ li:hover a{
+        letter-spacing: 0px;
+        color: var(--primary-color);
+    }
+    .links .pages li:hover  ul{
+        display: block;
+    }
+    .links .pages li:hover .lists-veg {
+        display: block;
+    }
+    .lists-veg {
+        display: block;
+        background: none;
+        position: relative;
+        box-shadow: none;
+        padding: 0;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+        top: 1rem !important;
+    }
+    .lists-veg li{
+        padding: 0 !important;
+        margin: 0 0 .5rem;
+    }
+    .lists-veg li a{
+        font-weight: normal !important;
+        text-align: start !important;
+    }
+    .lists-veg ul li a::before{
+        display: none;
+    }
+    .lists-veg.show ul li a{
+        letter-spacing: 0px !important;
+        color: var(--primary-color);
+    }
+    
 }
 @media (max-width:1024px){
     .search-bar .location span:last-child,
