@@ -605,7 +605,8 @@ html.visible{
 }
  /* part three of header  */
  /* area location */
- .my-location{
+ .my-location,
+ .my-product{
     display: flex;
     flex-direction: column;
     width: 500px;
@@ -619,7 +620,8 @@ html.visible{
     translate: -50% -50%;
     animation: down .2s linear;
  }
- .my-location.animate{
+ .my-location.animate,
+.my-product.animate{
     top: 53%;
  }
  .my-location svg {
@@ -630,7 +632,8 @@ html.visible{
     stroke: var(--search-color-placehoder);
     stroke-width: 65px;
 }
- .my-location .text-location h3{
+ .my-location .text-location h3,
+ .my-product .titles h3{
     font-size: 1.2rem;
     margin-bottom: 1rem;
  }
@@ -698,7 +701,8 @@ html.visible{
     border-radius: 14px;
     color: var(--search-color-placehoder);
  }
- .my-location #close{
+ .my-location #close,
+ .my-product #close{
     /* testing */
     width: 30px;
     height: 30px;
@@ -713,7 +717,8 @@ html.visible{
     align-items: center;
     cursor: pointer;
  }
- .my-location #close svg path{
+ .my-location #close svg path,
+ .my-product #close svg path{
     stroke: white;
  }
  ::-webkit-scrollbar{

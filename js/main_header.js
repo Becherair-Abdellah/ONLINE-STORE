@@ -126,8 +126,9 @@ function coin() {
 }
 // show menu bar in small screen when user click at bars
 let bars = document.getElementById('bars');
-let close = document.querySelector('#close');
-const button = [bars, close]
+let close = document.querySelectorAll('#close');
+console.log(close);
+const button = close;
 const menu = document.querySelector('.pages');
 const overlay = document.querySelector('.overlay');
 // when click at overlay hide menu 
@@ -142,7 +143,9 @@ overlay.onclick = () => {
 
 }
 button.forEach((btn) => {
-    btn.onclick = () => {
+    btn.onclick = (e) => {
+        e.preventDefault();
+        console.log('press');
         menu.classList.toggle('visible');
         overlay.classList.toggle('visible');
         document.querySelector('html').classList.toggle('visible');
@@ -289,4 +292,44 @@ class Product {
 for(let i =0;i<2;i++){
     let myProduct = new Product('/img/10028.png', 'chips playing', 340, 23, parent);
     myProduct.createProduct();
+}
+// dealtoday function to show recomended products
+const btnP= document.querySelector('.Today');
+btnP.onclick = (e)=>{
+    e.preventDefault();
+    recomenedProduct();
+} 
+function recomenedProduct(){
+    let div = document.createElement('div');
+    // my-location
+    div.classList = 'my-product';
+    let text = document.createElement('div');
+    // text-location
+    text.classList = 'titles';
+    let h3 = document.createElement('h3')
+    h3.innerText = 'Deal Today';
+    text.appendChild(h3);
+    let h5 = document.createElement('h5');
+    h5.innerText = 'Recommended deals for you.';
+    text.appendChild(h5);
+    div.appendChild(text);
+    document.querySelector('body').appendChild(div);
+
+
+
+
+        // btn close 
+        let btnclose = document.createElement('button');
+        btnclose.id = 'close';
+        btnclose.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Close</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"></path></svg>`;
+        btnclose.onclick = () => {
+            menu.classList.remove('visible');
+            document.querySelector('html').classList.remove('visible');
+            document.querySelector(".my-product") ? document.querySelector(".my-product").classList.remove('animate') : "";
+            setTimeout(() => {
+                document.querySelector(".my-product") ? document.querySelector(".my-product").remove() : "";
+                overlay.classList.remove('visible');
+            }, 140);
+        }
+    div.appendChild(btnclose);
 }
