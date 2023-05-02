@@ -134,12 +134,12 @@ const overlay = document.querySelector('.overlay');
 overlay.onclick = () => {
     menu.classList.remove('visible');
     document.querySelector('html').classList.remove('visible');
-    document.querySelector(".my-location")?document.querySelector(".my-location").classList.remove('animate'):"";
-    setTimeout(()=>{
-        document.querySelector(".my-location")?document.querySelector(".my-location").remove():"";
-    overlay.classList.remove('visible');
-    },140);
-    
+    document.querySelector(".my-location") ? document.querySelector(".my-location").classList.remove('animate') : "";
+    setTimeout(() => {
+        document.querySelector(".my-location") ? document.querySelector(".my-location").remove() : "";
+        overlay.classList.remove('visible');
+    }, 140);
+
 }
 button.forEach((btn) => {
     btn.onclick = () => {
@@ -150,18 +150,18 @@ button.forEach((btn) => {
     }
 });
 // conetnt of city delivery location
-const getArea =document.querySelector('.location');
+const getArea = document.querySelector('.location');
 // when use click at div location run follow function
-getArea.onclick =()=>{
+getArea.onclick = () => {
     overlay.classList.add('visible');
     cityDelivery();
-    setTimeout(()=>{
-    document.querySelector(".my-location").classList.add('animate');
-    },0)
+    setTimeout(() => {
+        document.querySelector(".my-location").classList.add('animate');
+    }, 0)
 }
 function cityDelivery() {
-    let areas = ["Alabama","Arizona","California","Colorado","Florida","Georgia"
-,"Kansas","Minnesota","New York","Washington"]
+    let areas = ["Alabama", "Arizona", "California", "Colorado", "Florida", "Georgia"
+        , "Kansas", "Minnesota", "New York", "Washington"]
     let div = document.createElement('div');
     div.classList = 'my-location';
     let text = document.createElement('div');
@@ -191,19 +191,19 @@ function cityDelivery() {
     search.appendChild(iconSearch);
     div.appendChild(search);
     // select location
-    let area =document.createElement('div');
+    let area = document.createElement('div');
     area.classList = 'area';
-    let label =document.createElement('label');
-    label.innerText ='Select a Location';
+    let label = document.createElement('label');
+    label.innerText = 'Select a Location';
     area.appendChild(label);
-    let ul =document.createElement('ul');
+    let ul = document.createElement('ul');
     ul.classList = 'areas';
-    for(let i=0;i<areas.length;i++){
+    for (let i = 0; i < areas.length; i++) {
         let price = 110;
         let a = document.createElement('a');
         let spanCity = document.createElement("span");
-        spanCity.innerText = areas[i];  
-        let priceDlvry =document.createElement('span');
+        spanCity.innerText = areas[i];
+        let priceDlvry = document.createElement('span');
         priceDlvry.innerText = `Min: $ ${price}`;
         price++;
         a.appendChild(spanCity);
@@ -213,18 +213,80 @@ function cityDelivery() {
     // btn close 
     let btnclose = document.createElement('button');
     btnclose.id = 'close';
-    btnclose.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Close</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"></path></svg>`;
-    btnclose.onclick = ()=>{
+    btnclose.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Close</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"></path></svg>`;
+    btnclose.onclick = () => {
         menu.classList.remove('visible');
         document.querySelector('html').classList.remove('visible');
-        document.querySelector(".my-location")?document.querySelector(".my-location").classList.remove('animate'):"";
-        setTimeout(()=>{
-            document.querySelector(".my-location")?document.querySelector(".my-location").remove():"";
-        overlay.classList.remove('visible');
-        },140);
+        document.querySelector(".my-location") ? document.querySelector(".my-location").classList.remove('animate') : "";
+        setTimeout(() => {
+            document.querySelector(".my-location") ? document.querySelector(".my-location").remove() : "";
+            overlay.classList.remove('visible');
+        }, 140);
     }
     area.appendChild(ul);
     div.appendChild(area);
     div.appendChild(btnclose);
     document.querySelector('body').appendChild(div);
+}
+// create recent products in cart user
+//parent products
+const parent = document.querySelector('.products');
+class Product {
+    constructor(imgP, nameP, QtP, priceP, parentP) {
+        this.imgP = imgP;
+        this.nameP = nameP;
+        this.QtP = QtP;
+        this.priceP = priceP;
+        this.parentP = parentP;
+    }
+    createProduct() {
+        const boxP = document.createElement('div');
+        boxP.classList = 'box-product';
+        const span = document.createElement('span');
+        span.id = 'rm-pr';
+        span.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Close</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"></path></svg>`;
+        boxP.appendChild(span);
+        const a = document.createElement('a');
+        a.href = '';
+        const divimg = document.createElement('div');
+        divimg.classList = 'img';
+        const img = document.createElement('img');
+        img.src = this.imgP;
+        divimg.appendChild(img);
+        a.appendChild(divimg);
+        const info = document.createElement('div');
+        info.classList = 'info';
+        const descrep = document.createElement('span');
+        descrep.classList = 'descrp';
+        descrep.innerText = this.nameP;
+        info.appendChild(descrep);
+        const pricing = document.createElement('pricing');
+        pricing.classList = 'pricing';
+        info.appendChild(pricing);
+        const qt = document.createElement('span');
+        qt.id = 'qt';
+        qt.innerText = this.QtP;
+        pricing.appendChild(qt);
+        const text = document.createTextNode('x $');
+        pricing.appendChild(text);
+        const price = document.createElement('span');
+        price.classList = 'price';
+        price.innerText = this.priceP;
+        pricing.appendChild(price);
+        a.appendChild(info);
+        boxP.appendChild(a);
+        this.parentP.appendChild(boxP);
+        // method of this function
+        span.onclick = () => {
+            boxP.style.opacity = 0;
+            setTimeout(() => {
+                boxP.remove();
+            }, 300)
+        }
+    }
+};
+// when pull the data from server in build the product
+for(let i =0;i<2;i++){
+    let myProduct = new Product('/img/10028.png', 'chips playing', 340, 23, parent);
+    myProduct.createProduct();
 }
