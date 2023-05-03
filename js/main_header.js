@@ -130,6 +130,7 @@ let close = document.querySelector('#close');
 const button = [bars, close];
 const menu = document.querySelector('.pages');
 const overlay = document.querySelector('.overlay');
+console.log(bars)
 // when click at overlay hide menu 
 const btnP = document.querySelector('.Today');
 overlay.onclick = () => {
@@ -390,3 +391,10 @@ function recomenedProduct() {
     }
     div.appendChild(btnclose);
 }
+// effects when user click at category
+const clickables =document.querySelectorAll('#clickable');
+clickables.forEach((click)=>{
+    click.onclick = ()=>{
+        click.children[1].classList.toggle('show');
+    }
+})
