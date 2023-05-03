@@ -191,6 +191,20 @@ html{
 .social-media{
     color: gray;
 }
+.social-media a:hover{
+    margin-bottom: .7rem;
+}
 .copyright{
     padding: 1rem;
+}
+.copyright span{
+    color: gray;
+}
+@media (max-width:768px){
+    .copyright{
+        justify-content: center;
+    }
+    .my-work{
+        display: none;
+    }
 }
