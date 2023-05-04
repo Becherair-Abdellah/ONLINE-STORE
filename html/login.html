@@ -14,7 +14,7 @@
     <!-- css file -->
     <link rel="stylesheet" href="/css/login.css">
     <!-- js file  -->
-    <script src="/js/login.js" ></script>
+    <script defer src="/js/login.js" ></script>
 </head>
 <body>
     <div class="cur-page flx-jst pd-all">
@@ -28,19 +28,17 @@
         </div>
     </div>
     <section class="login pd-all flx-jst" >
-        <div class="img">
             <img src="/allimg/loginimg/10001.png" alt="">
-        </div>
         <div class="info flx-jst-colmn">
             <h2>Welcome To Fastkart</h2>
-            <h3 class="h3-co-sz">Log In Your Account</h3>
+            <h3 id="er" class="h3-co-sz">Log In Your Account</h3>
             <form class="flx-jst-colmn-mini input-st" action="">
                 <div class="myinput">
                     <input type="email" name="email" required>
                 <label for="">Email Address</label>
                 </div>
                 <div class="myinput">
-                    <input type="password" required name="password">
+                    <input type="password" required name="password" autocomplete="">
                     <label for="">Password</label>
                 </div>
                 <span class="flx-jst mr-bt">
