@@ -192,6 +192,8 @@ th{
 .footer{
     background: #282834;
     padding: 1rem;
+    position: relative;
+    overflow: hidden;
 }
 .footer h2{
     color: white;
@@ -217,4 +219,17 @@ svg{
 }
 .copyright{
     color: rgb(196, 196, 196);
+}
+.footer img{
+    position: absolute;
+}
+.footer img:first-child{
+    left: 0;
+    top: 0;
+    scale: 3;
+}
+.footer img:nth-child(2){
+    right: 0;
+    top: 0;
+    scale: 3;
 }
