@@ -1,0 +1,148 @@
+:root{
+    --bg-color:#e2e2e2;
+    --primary-color: #0da487;
+    --tx-color:#939393;
+    --bg-color2: #f7f7f7;
+}
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+html{
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background: var(--bg-color);
+}
+*::selection{
+    color: white;
+    background: var(--primary-color);
+}
+.flx-evn{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0;
+}
+.flx-evn-cl{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.flx-btw ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.4rem;
+}
+.flx-genr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flx-genr-sb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.li-mr li:last-child{
+    margin-left: 7px;
+}
+.h1-mr{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.tx-align{
+    text-align: center;
+}
+.mr-dimg{
+    margin-top: 2rem;
+}
+.sz-img{
+    width: 100% !important;
+}
+.sz-img-head img{
+    width: 100px;
+}
+section{
+    width: 650px;
+    box-shadow: 0px 0px 6px -2px #393939;
+}
+.br-bt{
+    border-bottom: 2px solid rgb(240, 240, 240);
+}
+.header{
+    background: var(--bg-color2);
+}
+.header a{
+    color: black;
+}
+.text{
+    padding: 2.5rem 0;
+}
+.interested{
+    background: white;
+}
+.mini-img{
+    width: 60px !important;
+}
+.text p{
+    color: gray;
+}
+table{
+    width: 100%;
+}
+th{
+    text-align: start;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 55% 15% 15%;
+    gap: 5.5%;
+}
+.head h4{
+    padding: 1.5rem;
+}
+.head{
+    margin: 0 1%;
+}
+.products{
+    background: white;
+    padding: 1.5rem;
+}
+.box{
+    width: 100%;
+    align-items: center;
+    padding: 0.7rem 0;
+}
+.sz-img img{
+    width: 80px;
+    margin-left: 1rem;
+}
+.pr{
+    justify-content: start;
+}
+#nbr-p,
+#nbr-q{
+    color: rgb(168, 168, 168);
+}
+.q,.p{
+    font-weight: 700;
+    display: flex;
+    gap: 0.2rem;
+}
+.tot-col{
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.foot{
+    padding: 1.4rem;
+    background: var(--bg-color2);
+    margin-top: 1rem;
+    border-radius: 5px;
+}
