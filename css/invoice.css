@@ -73,27 +73,73 @@ html{
 .email span{
     text-transform: lowercase !important;
 }
-th,td{
+th{
     font-weight: 600;
     font-size: 14px;
-    padding: 1rem 2rem;
+    padding: 1rem;
     border: 1px solid #e4e4e4;
     border-right: none;
 }
-td{
-    color: gray;
-}
-th:last-child,
-td:last-child{
+th:last-child{
     border: 1px solid #e4e4e4;
 }
 td{
+    text-align: center;
+    padding: .4rem;
+    font-size: 14px;
+    border: 1px solid rgb(208, 208, 208);
+    border-right: none;
     border-top: none;
-    padding: 1.5rem 2rem;
+    color: gray;
+    font-weight: 600;
+}
+td:last-child{
+    border-right: 1px solid rgb(208, 208, 208);
+}
+td:nth-child(2){
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+td:nth-child(2) span:first-child{
+    color: rgb(50, 50, 50);
+}
+td:nth-child(2) span{
+    font-weight: 700;
+    font-size: 13px;
+}
+td:nth-child(2) span:last-child{
+    color: gray;
+    font-weight: 700;
+    font-size: 13px;
+}
+td:last-child{
+    border-top: none;
 }
 table{
-    margin: 0 auto;
     margin-top: 2rem;
+}
+.tbl-mr{
+    width: 780px;
+}
+.tbl-mr tbody tr:nth-child(4){
+    background: var(--bg-color2);
+}
+.tbl-mr tbody tr:nth-child(2){
+    background: var(--bg-color2);
+}
+.tbl-mr th:nth-child(2){
+    width: 345px;
+    text-align: start;
+}
+.tables{
+    overflow: hidden;
+    overflow-x:visible ;
+}
+.tbl-mr th{
+    background-color: var(--primary-color);
+    color: white;
 }
 @media (max-width:1200px){
     .invoice-ruls{
