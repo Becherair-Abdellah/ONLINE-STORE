@@ -1,23 +1,4 @@
-:root{
-    --gray-color:gray;
-    --primary-color: #0da487;
-    --red-color: #ff5353;
-}
-html {
-    font-family: 'Open Sans', sans-serif;
-    scroll-behavior: smooth;
-}
-*{
-    transition: all .3s;
-    list-style: none;
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
-}
-*::selection{
-    color: white;
-    background-color: var(--primary-color);
-}
+
 .flx-jst{
     display: flex;
     justify-content: space-between;

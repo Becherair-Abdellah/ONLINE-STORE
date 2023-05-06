@@ -1,9 +1,4 @@
-:root{
-    --bg-color:#f9f9f9;
-    --primary-color: #0da487;
-    --tx-color:#333333;
-    --bg-color2: #f7f7f7;
-}
+
 *{
     list-style: none;
     margin: 0;
@@ -14,10 +9,6 @@
 body{
     background: var(--bg-color);
     padding: 1rem 0;
-}
-html{
-    font-family: 'Open Sans', sans-serif;
-    scroll-behavior: smooth;
 }
 .inv-flx{
     display: flex;

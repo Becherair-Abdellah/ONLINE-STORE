@@ -1,24 +1,4 @@
-:root {
-    /* system design of Fast Kart : */
 
-    --primary-color: #0da487;
-    --light-primary-color: #e5f5f2;
-    --text-color: #323232;
-    --search-color-placehoder: #707981;
-    --icon-search-color: #ffa53b;
-    --red-color: #ff7272;
-    --icon-color: #222;
-    --margin-all: 20%;
-}
-*{
-    transition: all .3s;
-    list-style: none;
-    text-decoration: none;
-}
-html{
-    font-family: 'Open Sans', sans-serif;
-    scroll-behavior: smooth;
-}
 .b-dashed-bt{
     border-bottom: 1px dashed #c1c1c1;
 }

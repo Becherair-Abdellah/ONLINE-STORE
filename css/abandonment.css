@@ -1,27 +1,7 @@
-:root{
-    --bg-color:#e2e2e2;
-    --primary-color: #0da487;
-    --tx-color:#939393;
-    --bg-color2: #f7f7f7;
-}
-*{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-transform: capitalize;
-    text-decoration: none;
-}
-html{
-    font-family: 'Open Sans', sans-serif;
-    scroll-behavior: smooth;
-}
+
 body{
     background: var(--bg-color);
     padding: 1.5rem 0;
-}
-*::selection{
-    color: white;
-    background: var(--primary-color);
 }
 .flx-evn{
     display: flex;

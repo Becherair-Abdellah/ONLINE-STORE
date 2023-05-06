@@ -33,7 +33,7 @@ function langContent() {
         if (i == 0) {
             let ln1 = document.createElement('li');
             let img1 = document.createElement('img')
-            img1.src = " /img/10002.png";
+            img1.src = " /img/imgheader/10002.png";
             let h4one = document.createElement('h4');
             h4one.innerText = 'english';
             ln1.appendChild(img1);
@@ -46,7 +46,7 @@ function langContent() {
         if (i == 1) {
             let ln1 = document.createElement('li');
             let img1 = document.createElement('img')
-            img1.src = " /img/10005.png";
+            img1.src = " /img/imgheader/10005.png";
             let h4one = document.createElement('h4');
             h4one.innerText = 'turki';
             ln1.appendChild(img1);
@@ -59,7 +59,7 @@ function langContent() {
         if (i == 2) {
             let ln1 = document.createElement('li');
             let img1 = document.createElement('img')
-            img1.src = " /img/10004.png";
+            img1.src = " /img/imgheader/10004.png";
             let h4one = document.createElement('h4');
             h4one.innerText = 'Germany';
             ln1.appendChild(img1);
@@ -295,7 +295,7 @@ class Product {
 };
 // when pull the data from server in build the product
 for (let i = 0; i < 2; i++) {
-    let myProduct = new Product('/img/10028.png', 'chips playing', 340, 23, parent);
+    let myProduct = new Product('/img/imgheader/10028.png', 'chips playing', 340, 23, parent);
     myProduct.createProduct();
 }
 btnP.onclick = (e) => {
@@ -373,7 +373,7 @@ function recomenedProduct() {
     contentPr.classList = 'content-prd';
     div.appendChild(contentPr);
     for(let i=0;i<4;i++){
-        let newProduct = new RecentProduct('/img/10028.png','this is my product',i+23.43,30.50,300,contentPr);
+        let newProduct = new RecentProduct('/img/imgheader/10028.png','this is my product',i+23.43,30.50,300,contentPr);
         newProduct.createProduct();
     }
     // btn close 
