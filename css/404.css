@@ -1,0 +1,54 @@
+
+.flx-jst{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.mini-flx{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+svg{
+    width: 16px;
+    height: 16px;
+    fill: var(--gray-color);
+}
+.pd-all{
+    padding: 2.5rem 9%;
+}
+.cur-page{
+    background: #f1f1f185;
+}
+.p-404{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+}
+.btn{
+    color: white;
+    background: var(--primary-color);
+    padding: .7rem 1.6rem;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.sz-img{
+    width: 350px;
+}
+.p-color{
+    width: 80%;
+    line-height: 2rem;
+    color: var(--search-color-placehoder);
+}
+@media (max-width:1024px){
+}
+@media (max-width:1200px){
+}
