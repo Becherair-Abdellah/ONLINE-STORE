@@ -79,6 +79,7 @@ th{
     padding: 1rem 0.2rem;
     border: 1px solid #e4e4e4;
     border-right: none;
+
 }
 th:last-child{
     border: 1px solid #e4e4e4;
@@ -117,14 +118,15 @@ td:last-child{
 td:nth-child(2) span:last-child{
     color: gray;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 11px;
 }
 .tbl-mr td:last-child{
     border-top: none;
 }
 table{
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 100%;
+    border-collapse: collapse;
 }
 .tbl-mr{
     width: 670px;
@@ -139,7 +141,7 @@ table{
     width: 345px;
     text-align: start;
 }
-.tables{
+.tabels{
     overflow: hidden;
     overflow-x:visible ;
 }
@@ -174,6 +176,7 @@ table{
 }
 .foot-sign{
     align-items: end;
+    padding: 0;
 }
 .exp-pdf,.print{
     cursor: pointer;
@@ -192,6 +195,12 @@ table{
     border: none;
     border-radius: 6px;
     padding: .7rem 1rem;
+}
+.tbl-mr thead th{
+    border: none;
+}
+.tbl-mr thead{
+    border: 1px solid var(--primary-color);
 }
 @media (max-width:1200px){
     .invoice-ruls{
