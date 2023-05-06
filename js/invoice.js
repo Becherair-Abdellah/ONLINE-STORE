@@ -4,6 +4,7 @@ printBtn.onclick = ()=>{
     document.querySelector('.tabels').style = 'overflow:visible;';
     window.print();
 }
+// both print or export as Pdf
 window.addEventListener('afterprint',(e)=>{
     console.log(e)
     document.querySelector('.tabels').style =`    overflow: hidden;
