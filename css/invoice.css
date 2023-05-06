@@ -83,9 +83,10 @@ th{
 th:last-child{
     border: 1px solid #e4e4e4;
 }
-td{
+td,
+.tbl-mr td{
     text-align: center;
-    padding: .4rem;
+    padding: 1rem;
     font-size: 14px;
     border: 1px solid rgb(208, 208, 208);
     border-right: none;
@@ -93,19 +94,23 @@ td{
     color: gray;
     font-weight: 600;
 }
+.tbl-mr td{
+    text-align: center;
+    padding: .4rem;
+}
 td:last-child{
     border-right: 1px solid rgb(208, 208, 208);
 }
-td:nth-child(2){
+.tbl-mr td:nth-child(2){
     text-align: start;
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
 }
-td:nth-child(2) span:first-child{
+.tbl-mr td:nth-child(2) span:first-child{
     color: rgb(50, 50, 50);
 }
-td:nth-child(2) span{
+.tbl-mr td:nth-child(2) span{
     font-weight: 700;
     font-size: 13px;
 }
@@ -114,11 +119,12 @@ td:nth-child(2) span:last-child{
     font-weight: 700;
     font-size: 13px;
 }
-td:last-child{
+.tbl-mr td:last-child{
     border-top: none;
 }
 table{
     margin-top: 2rem;
+    width: 100%;
 }
 .tbl-mr{
     width: 780px;
@@ -141,18 +147,37 @@ table{
     background-color: var(--primary-color);
     color: white;
 }
+.gr-total{
+    justify-content: end;
+    gap: 1rem;
+}
+.gr-total span{
+    font-weight: bold;
+}
+.gr-total span:last-child{
+    color: var(--primary-color);
+}
 @media (max-width:1200px){
     .invoice-ruls{
         width: 80%;
+    }
+    .tbl-mr{
+        width: 100%;
     }
 }
 @media (max-width:991px){
     .invoice-ruls{
         width: 70%;
     }
+    .tbl-mr{
+        width: 780px;
+    }
 }
 @media (max-width:768px){
     .invoice-ruls{
         width: 90%;
+    }
+    .tbl-mr{
+        width: 780px;
     }
 }
