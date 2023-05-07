@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+.h3-f-c{
+    font-family: 'Pacifico', cursive;
+    color: var(--primary-color);
+    font-weight: normal;
+}
+/* current page */
+
+.flx-jst{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.gr-all{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.flx-cl{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1rem;
+}
+.flx-cl-ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: .5rem;
+}
+.flx-cl-ul li{
+    color: #747474;
+}
+.mini-flx{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+svg{
+    width: 16px;
+    height: 16px;
+}
+.pd-all{
+    padding: 2rem 9%;
+}
+.cur-page{
+    background: #f1f1f185;
+}
+.img-br-ra{
+    border-radius: 0px 3rem 0px 3rem;
+}
+.img-br-ra-one{
+    border-radius: 3rem 0 3rem 0;
+    position: relative;
+    top: 3rem;
+}
+.img-br-ra-one .imag1{
+    background-image: url("/img/imgabout/10022.jpg");
+}
+.sz-mi-img{
+    width: 30px;
+}
+.h1-mr-b{
+    margin-bottom: 1rem;
+}
+.p-lh{
+    line-height: 2rem;
+    color: var(--tx-color);
+}
+.big-img-sz img{
+}
+.img-svg img{
+    width: 30px;
+    height: 30px;
+}
+.about-us{
+    padding-top: 4rem;
+    align-items: start;
+    gap: 3rem;
+}
+.my-img{
+    overflow: hidden;
+}
+.imag1{
+    background-image: url("/img/imgabout/10033.jpg");
+    width: 280px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+.imag1:hover{
+    scale: 1.1;
+}
+.h1-set{
+    font-size: 2.7rem;
+    color: #2c2c2c;
+}
+.h5-set{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--search-color-placehoder);
+}
+.p-set{
+    color: #5c5c5c;
+    font-size: 13px;
+    line-height: 1.7;
+    font-weight: 600;
+}
+.li-set li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.my-img,
+.my-img .imag1{
+    width: 100%;
+}
+@media (max-width:1200px){
+    .gr-all {
+        grid-template-columns: 100%;
+    }
+    .h1-set {
+        font-size: 200%;
+        color: #2c2c2c;
+    }
+}
+@media (max-width:768px){
+    .h1-set {
+        font-size: 150%;
+        color: #2c2c2c;
+    }
+}
