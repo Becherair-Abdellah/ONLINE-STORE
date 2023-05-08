@@ -140,7 +140,8 @@ svg{
 .my-img .imag1{
     width: 100%;
 }
-.what-we-do{
+.what-we-do,
+.testimonials{
     background: var(--bg-color2);
 }
 .box{
@@ -189,6 +190,123 @@ svg{
 .what-we-do{
     padding: 3rem 8%;
 }
+.team-members .boxes{
+    background: none;
+    margin-top: 6rem;
+}
+.team-members h3{
+    margin: .4rem 0;
+}
+.team-members h4{
+    font-weight: normal;
+    color: var(--tx-color);
+    font-size: 18px;
+    margin-bottom: 0.4rem;
+}
+.team-members p{
+    color: gray;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+.team-members .member .img{
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    width: fit-content;
+}
+.team-members .member:hover img{
+    filter: grayscale(0%);
+    scale: 1.1;
+
+}
+.sz-ic-memb img{
+    width: 200px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+}
+.so-media{
+    margin-top: .5rem;
+    justify-content: center;
+}
+.so-media span{
+    padding: 7px;
+    background: #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+.fa{
+    fill: #0440f3;
+}
+.pi{
+    fill: #fa2828;
+}
+.tw{
+    fill: #049bf3;
+}
+.ins{
+    fill: #cf047b;
+}
+.rating{
+    justify-content: start;
+    gap: 0.1rem;
+}
+.rating svg{
+    fill: rgb(245 156 25);
+    stroke: rgb(245 156 25);
+    width: 15px;
+    height: 15px;
+}
+.rating li:last-child svg{
+    stroke: rgb(245 156 25);
+    fill: transparent;
+}
+.boxes .testi p{
+    text-align: start;
+    font-size: 15px;
+    line-height: 1.5rem;
+    color: var(--text-color);
+}
+.boxes .testi h3{
+    color: rgb(49, 49, 49);
+    font-weight: 600;
+    font-size: 19px;
+}
+.profile img{
+    width: 60px;
+    height: 60px;
+    border-radius: 7px;
+    filter: grayscale(0%);
+}
+.profile{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 0;
+}
+.info-prf{
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+.info-prf h6{
+    color: gray;
+    font-weight: 600;
+    font-size: 13px;
+}
+.testi{
+    padding: 1rem 1.3rem;
+    background: white;
+    border-radius: 5px;
+}
+.testimonials .boxes{
+    margin-top: 3rem;
+}
+/* .testimonials{
+    padding: 2rem 0;
+} */
 @media (max-width:1200px){
     .gr-all {
         display: grid;
@@ -216,5 +334,11 @@ svg{
     .h1-set {
         font-size: 150%;
         color: #2c2c2c;
+    }
+}
+@media (max-width:568px){
+    .my-img, .my-img .imag1 {
+        width: 100%;
+        height: 187px;
     }
 }
