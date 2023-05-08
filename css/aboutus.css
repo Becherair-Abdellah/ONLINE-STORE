@@ -307,12 +307,14 @@ svg{
 .blogs .boxes{
     background: none;
     text-align: start;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
 }
 .blogs .blog{
     color: gray;
     font-weight: 600;
     font-size: 13px;
-    margin-top: 3rem;
 }
 .blogs .blog h5{
     color: black;
@@ -345,6 +347,9 @@ svg{
         font-size: 200%;
         color: #2c2c2c;
     }
+    .blogs .boxes{
+        grid-template-columns: repeat(3,1fr);
+    }
 }
 @media (max-width:991px){
     .gr-all {
@@ -355,14 +360,17 @@ svg{
         font-size: 200%;
         color: #2c2c2c;
     }
-    .boxes{
-
+    .blogs .boxes{
+        grid-template-columns: repeat(2,1fr);
     }
 }
 @media (max-width:768px){
     .h1-set {
         font-size: 150%;
         color: #2c2c2c;
+    }
+    .blogs .boxes{
+        grid-template-columns: repeat(1,1fr);
     }
 }
 @media (max-width:568px){
