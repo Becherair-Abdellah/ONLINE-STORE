@@ -155,12 +155,18 @@ tr{
     padding: 1rem;
     border-bottom: 1px solid #e2dcdc;
 }
+tr:last-child{
+    border: none;
+}
 td{
     padding-right: 1.5rem;
 }
 .cart{
     padding: 2.5rem 7%;
     gap: 3rem;
+    align-items: start; 
+}
+.cart .container{
     align-items: start;
 }
 .coupon {
@@ -247,4 +253,27 @@ label{
 }
 .rtn:hover{
     box-shadow: 0px 0px 0px 4px #e2dfdf;
+}
+@media (max-width:1291px){
+    .cart{
+        flex-wrap: wrap;
+    }
+    .my-table{
+        width: 100%;
+        overflow: hidden;
+        overflow-x: auto;
+    }
+    .my-table table{
+        width: 1000px;
+    }
+}
+@media (max-width:1168px){
+    .cart .container table{
+        width: 100%;
+    }
+}
+@media (max-width:568px){
+    .cart  table{
+        width: 1024px;
+    }
 }
