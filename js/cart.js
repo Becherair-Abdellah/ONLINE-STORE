@@ -123,9 +123,18 @@ tdelement6.className = "flx-jst-colmn-mini big-pd-right";
 const span1 = document.createElement("span");
 span1.textContent = "action";
 const span2 = document.createElement("span");
+span2.onclick = ()=>{
+    progress();
+}
 span2.className = "sv-wish";
 span2.textContent = "Save for later";
 const span3 = document.createElement("span");
+span3.onclick = ()=>{
+    tr.style = 'opacity:0;'
+    setTimeout(()=>{
+        tr.remove();
+    },400)
+}
 span3.className = "rm-wish";
 span3.textContent = "remove";
 tdelement6.appendChild(span1);
@@ -137,3 +146,83 @@ parent.appendChild(tr)
 }
 const pr = new Product();
 console.log(pr.createTdpr());
+console.log(pr.createTdpr());
+console.log(pr.createTdpr());
+console.log(pr.createTdpr());
+console.log(pr.createTdpr());
+console.log(pr.createTdpr());
+console.log(pr.createTdpr());
+// function prompt save products in wish list and progress it
+function progress(){
+    if(document.querySelector('.wait-min')){
+        document.querySelector('.wait-min').remove();
+    }
+    // Create the <div> element with the class "wait-min flx-jst-colmn"
+var divElement = document.createElement('div');
+divElement.className = 'wait-min flx-jst-colmn';
+// Create the first <span> element with the success message and icon
+var firstSpanElement = document.createElement('span');
+var nestedSpanElement = document.createElement('span');
+nestedSpanElement.className = 'btnsuccess';
+var svgElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+svgElement.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+svgElement.setAttribute('viewBox', '0 0 448 512');
+var pathElement = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+pathElement.setAttribute('d', 'M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z');
+svgElement.appendChild(pathElement);
+nestedSpanElement.appendChild(svgElement);
+firstSpanElement.appendChild(nestedSpanElement);
+firstSpanElement.appendChild(document.createTextNode(' Success!'));
+
+// Create the second <span> element with the success message
+var secondSpanElement = document.createElement('span');
+secondSpanElement.appendChild(document.createTextNode('Item Successfully added in wishlist'));
+
+// Create the third <span> element with the close button icon
+var thirdSpanElement = document.createElement('span');
+thirdSpanElement.onclick = ()=>{
+    divElement.remove();
+}
+thirdSpanElement.className = 'btnclose';
+var svgElement2 = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+svgElement2.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+svgElement2.setAttribute('class', 'ionicon');
+svgElement2.setAttribute('viewBox', '0 0 512 512');
+var pathElement2 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+pathElement2.setAttribute('fill', 'none');
+pathElement2.setAttribute('stroke', 'currentColor');
+pathElement2.setAttribute('stroke-linecap', 'round');
+pathElement2.setAttribute('stroke-linejoin', 'round');
+pathElement2.setAttribute('stroke-width', '32');
+pathElement2.setAttribute('d', 'M368 368L144 144M368 144L144 368');
+svgElement2.appendChild(pathElement2);
+thirdSpanElement.appendChild(svgElement2);
+
+// Create the fourth <span> element for the progress
+var fourthSpanElement = document.createElement('span');
+fourthSpanElement.className = 'progress';
+
+// Append all the elements to the <div> element
+divElement.appendChild(firstSpanElement);
+divElement.appendChild(secondSpanElement);
+divElement.appendChild(thirdSpanElement);
+divElement.appendChild(fourthSpanElement);
+
+// Append the <div> element to the document body or any other desired location
+document.body.appendChild(divElement);
+setTimeout(()=>{
+    fourthSpanElement.style.width = '25%';
+    setTimeout(()=>{
+        fourthSpanElement.style.width = '50%';
+        setTimeout(()=>{
+            fourthSpanElement.style.width = '75%';
+            setTimeout(()=>{
+                fourthSpanElement.style.width = 'calc(100% + 2px)';
+                setTimeout(()=>{
+                    divElement.remove();
+                },1000)
+            },1000);
+        },1000);
+    },2000);
+},1000);
+}
