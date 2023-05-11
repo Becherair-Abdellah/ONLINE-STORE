@@ -161,6 +161,10 @@ tr:last-child{
 td{
     padding-right: 1.5rem;
 }
+td:hover img{
+    scale: 1.1;
+    cursor: pointer;
+}
 .cart{
     padding: 2.5rem 7%;
     gap: 3rem;
@@ -213,6 +217,7 @@ label{
     width: 100px;
     border-radius: 0 4px 4px 0;
     font-size: 16px;
+    cursor: pointer;
 }
 .coupon ul li{
     width: 100%;
@@ -253,6 +258,13 @@ label{
 }
 .rtn:hover{
     box-shadow: 0px 0px 0px 4px #e2dfdf;
+}
+.counter-pr input{
+    border: none;
+    background: none;
+    width: 32px;
+    outline: none;
+    padding-left: 9px;
 }
 @media (max-width:1291px){
     .cart{
