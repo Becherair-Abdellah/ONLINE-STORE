@@ -50,14 +50,14 @@
     align-items: center;
     gap: .5rem;
 }
-img{
-    width: 330px;
+.info img{
+    width: 370px;
 }
 .btm-title{
     width: fit-content;
     position: relative;
     font-weight: 600;
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 .btm-title::before{
     content: '';
@@ -76,12 +76,12 @@ img{
     font-weight: bold;
 }
 .box i{
-    padding: 7px;
+    padding: 10px;
     background: var(--primary-color);
     border-radius: 10px;
     color: white;
     position: absolute;
-    left: -18px;
+    left: -28px;
 }
 .box{
     width: 100%;
@@ -93,10 +93,127 @@ img{
 .info-more{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 1rem;
+    gap: 3rem;
+    row-gap: 1rem;
     margin-top: 2rem;
 }
 .info{
     text-align: center;
+    flex: 1;
+}
+.my-inputs i{
+    position: absolute;
+    top: 54%;
+    font-size: 18px;
+    left: 15px;
+}
+form i{
+    color: #848484;
+}
+.my-inputs{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+.my-inputs div{
+    position: relative;
+}
+.my-inputs input,textarea{
+    border: none;
+    padding: 1.2rem 0rem 1.2rem 3rem;
+    background: white;
+    outline: none;
+    font-size: 15px;
+    border-radius: 5px;
+    text-transform: none;
+    width: 100%;
+}
+form{
+    background: var(--bg-color2);
     padding: 2rem;
+    border-radius: 7px;
+    position: relative;
+}
+form label{
+    color: #515151;
+}
+form textarea{
+    width: 100%;
+    margin-top: 2rem;
+    resize: vertical;
+}
+form h1{
+    position: absolute;
+    font-size: 20px;
+    top: -2rem;
+    left: 0;
+    display: none;
+}
+.text-area{
+    position: relative;
+}
+.text-area i{
+    position: absolute;
+    left: 1rem;
+    top: 53px;
+}
+.btn{
+    margin: 0 calc(100% - 150px);
+    width: 150px !important;
+    height: 40px !important;
+    font-size: 16px !important;
+    margin-top: 1rem !important;
+    display: block !important;
+}
+.contact-us{
+    padding: 3rem 8%;
+    gap: 2rem;
+    align-items: start;
+}
+.api{
+    padding: 7rem;
+    font-size: 90px;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+@media (max-width:1200px){
+    .my-inputs {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .info-more {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media (max-width:992px){
+    .contact-us{
+        display: block;
+    }
+    .my-inputs {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .info-more {
+        grid-template-columns: repeat(2,1fr);
+        padding-left: 1.2rem;
+    }
+    .info{
+        margin-bottom: 2rem;
+    }
+}
+@media (max-width:768px){
+    .contact-us{
+        display: block;
+    }
+    .my-inputs {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .info-more {
+        grid-template-columns: repeat(1,1fr);
+        padding: 0 1.5rem;
+        margin-bottom: 3rem;
+    }
+    form h1{
+        display: block;
+    }
 }
