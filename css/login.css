@@ -120,12 +120,6 @@ a{
 .info h2{
     font-weight: 400;
 }
-form{
-    width: 100%;
-    align-items: start;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid #e2e2e2;
-}
 form span{
     width: 100%;
 }
@@ -160,27 +154,6 @@ input[type="checkbox"]::after{
 }
 input[type="checkbox"]:checked::after{
     scale: 1;
-}
-.myinput label{
-    background-color: white;
-    padding: 5px;
-    color: gray;
-    font-size: 15px;
-    border-radius: 3px;
-    position: relative;
-    top: -33px;
-    left: 5px;
-    pointer-events: none;
-}
-.myinput input[type="email"]:focus ~ label,
-.myinput input[type="password"]:focus ~ label,
-.myinput input[type="email"]:valid ~ label,
-.myinput input[type="password"]:valid ~ label{
-    top: -59px;
-    left: 20px;
-}
-.myinput{
-    width: 100%;
 }
 .btn{
     border: none;

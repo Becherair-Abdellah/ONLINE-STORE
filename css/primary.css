@@ -98,3 +98,92 @@ svg{
     height: 16px;
     fill: var(--gray-color);
 }
+.pd-primary{
+    padding: 0 10%;
+}
+.pd-all{
+    padding: 2.5rem 9%;
+}
+.cur-page{
+    background: #f1f1f185;
+}
+
+.flx-jst{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.flx-jst-cent a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.gr-d{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.flx-jst-colmn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.flex-jst-start{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+}
+.flx-jst-colmn-mini{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    gap: .5rem;
+}
+.mini-flx{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+.myinput input{
+    height: 50px;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    width: calc(100% - 1rem);
+    outline: none;
+    border-radius: 5px;
+}
+.myinput label{
+    background-color: white;
+    padding: 5px;
+    color: gray;
+    font-size: 15px;
+    border-radius: 3px;
+    position: relative;
+    top: -33px;
+    left: 5px;
+    pointer-events: none;
+}
+.myinput input[type="text"]:focus ~ label,
+.myinput input[type="email"]:focus ~ label,
+.myinput input[type="password"]:focus ~ label,
+.myinput input[type="text"]:valid ~ label,
+.myinput input[type="email"]:valid ~ label,
+.myinput input[type="password"]:valid ~ label{
+    top: -59px;
+    left: 20px;
+}
+.myinput{
+    width: 100%;
+}
+form{
+    width: 100%;
+    align-items: start;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e2e2e2;
+}
