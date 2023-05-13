@@ -1,0 +1,286 @@
+.bg-color{
+    background: #f8f8f8;
+}
+.lb-bg-co{
+    background-color: var(--primary-color);
+    padding: 3px 6px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+}
+.del-address,
+.del-option,
+.charge-date,
+.pay-option{
+    padding: 2rem;
+    background: var(--bg-color2);
+    border-radius: 7px;
+    position: relative;
+}
+.del-address h3{
+    margin-bottom: 1rem;
+}
+.col1{
+    justify-content: start !important;
+    gap: 1rem !important;
+    width: 100%;
+}
+.col1 .name{
+    flex: 1;
+}
+.boxes{
+    gap: 1rem !important;
+}
+.boxes .box{
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow:0 0 6px -1px #e2e2e2;
+}
+input[type="radio"]{
+    appearance: none;
+    -webkit-appearance: none;
+    background: white;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 1px solid #d9d9d9;
+    transition: none;
+}
+input[type="radio"]:checked{
+    border: 4px solid var(--primary-color);
+}
+.box .address span,
+.box .pin-code span,
+.col4 span{
+    color: gray;
+}
+.del-option{
+    margin-top: 1.5rem;
+    padding: 1.8rem;
+}
+.del-option .box{
+    width: 100%;
+    padding: 1.7rem;
+    box-shadow: none;
+    border-radius: 3px;
+    margin-top: 1rem;
+}
+.del-option .box h3{
+    color: #2d2d2d;
+    font-weight: 500;
+}
+.pay-option ul h3{
+    color: #2d2d2d;
+    font-weight: 500;
+    font-size: 16px;
+}
+.charge-date{
+    margin-top: 1rem;
+    padding: 1.4rem;
+    background: white;  
+    /* display: none; */
+}
+.charge-date div{
+    width: 100%;
+}
+.charge-date .myinput input{
+    border: 1px solid lightgrey;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+.charge-date .myinput{
+    position: relative;
+}
+.charge-date .myinput label{
+    color: gray;
+    background: white;
+    font-weight: 500;
+    font-size: 15px;
+    position: absolute;
+    top: -17px;
+    left: 22px;
+}
+.charge-date .info,
+.charge-date .info i{
+    color: gray;
+}
+.charge-date .info i{
+    font-size: 17px;
+    margin-left: 10px;
+}
+.pay-option{
+    margin-top: 1.5rem;
+}
+.pay-option ul{
+    margin-top: 1rem;
+    align-items: start;
+}
+.pay-option ul li{
+    padding: 1rem;
+    background: white;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    transition: none;
+    overflow: hidden;
+}
+.pay-option ul li.rotate i{
+    rotate: 180deg;
+}
+.pay-option ul li.rotate{
+    height: 100%;
+}
+.pay-option ul li  i{
+    position: absolute;
+    right: 10px;
+    color: gray;
+}
+.know-more{
+    color: rgb(117 115 115);
+    font-size: 12px;
+    font-weight: 500;
+}
+.know-more strong{
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.pay-option li .myinput input,
+select{
+    text-transform: none;
+    border: 1px solid #bbbaba;
+    width: 100%;
+}
+select{
+    border: 1px solid rgb(212, 212, 212);
+    background: none;
+    padding: 1rem;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 1rem;
+}
+select:focus{
+    border-color: var(--primary-color);
+}
+.pay-option li:nth-child(2),
+.pay-option li:nth-child(4),
+.pay-option li:nth-child(3){
+    overflow: hidden;
+    transition: .3s;
+}
+.pay-option li:first-child.rotate{
+    height: 80px;
+    transition: .3s;
+}
+.pay-option li:nth-child(2).rotate{
+    height: 370px;
+}
+.pay-option li:nth-child(3).rotate{
+    height: 255px;
+}
+.pay-option li:nth-child(3).rotate{
+    height: 186px;
+}
+.myinput input:focus ~ label{
+    top: -59px !important;
+    left: 5px !important;
+    scale: .3 !important;
+}
+.pay-option li .myinput label{
+    color: rgb(92, 91, 91);
+}
+.btn,.cncl{
+    cursor: pointer;
+    padding: 13px 25px;
+    font-size: 15px;
+    border-radius: 5px;
+
+}
+.cncl{
+    color: black;
+    background: rgb(227, 227, 227);
+    border: none;
+
+}
+.btn{
+    width: fit-content;
+    height: fit-content;
+    background: rgb(244 67 67);
+    font-weight: 300;
+}
+.btns {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+}
+form{
+    padding-bottom: 0;
+    border: none;
+}
+.checkboxs{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 1rem;
+    margin-top: 1rem;
+}
+.checkboxs div{
+    justify-content: start;
+}
+.checkboxs label{
+    font-size: 15px;
+}
+.spec{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.myicon{
+    width: fit-content;
+    background: #f4f4f4;
+    padding: 3px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -55px;
+    top: 0;
+}
+lord-icon{
+    width: 40px;
+    height: 38px;
+}
+.divs{
+    position: relative;
+}
+.divs::before{
+    content: '';
+    width: 3px;
+    height: 644px;
+    position: absolute;
+    left: -36px;
+    top: 0;
+    background: transparent;
+    border-right: 1px dashed rgb(168, 168, 168);
+}
+@media (max-width:768px){
+    .boxes{
+        flex-wrap: wrap;
+    }
+    .boxes .box{
+        width: 100%;
+    }
+    .charge-date{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .checkboxs {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+}
