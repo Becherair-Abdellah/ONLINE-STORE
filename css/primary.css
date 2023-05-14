@@ -23,7 +23,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    /* transition: .3s; */
+    transition: .3s;
     text-transform: capitalize;
 }
 
@@ -96,7 +96,8 @@ input[type=number] {
 svg{
     width: 16px ;
     height: 16px;
-    fill: var(--gray-color);
+    /* fill: var(--gray-color); */
+    fill: var(--search-color-placehoder);
 }
 .pd-primary{
     padding: 0 10%;

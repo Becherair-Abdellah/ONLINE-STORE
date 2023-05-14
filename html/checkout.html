@@ -97,13 +97,13 @@
                 <div class="boxes flx-jst">
                     <div class="box flx-jst-colmn-mini">
                         <span class="col1 mini-flx">
-                            <input type="radio">
+                            <input class="target" type="radio">
                             <h3>Standard Delivery Option</h3>
                         </span>
                     </div>
                     <div class="box flx-jst-colmn-mini">
                         <span class="col1 mini-flx">
-                            <input type="radio">
+                            <input class="target" type="radio">
                             <h3>Future Delivery Option</h3>
                         </span>
                     </div>
@@ -133,131 +133,148 @@
                 </div>
                 <h3>Payment Option</h3>
                 <ul class="flx-jst-colmn" >
-                    <li><span class="col1 flx-jst-colmn-mini">
+                    <!-- li 1  -->
+                    <li>
+                        <span class="col1 flx-jst-colmn-mini">
                         <div class="mini-flx">
                             <input class="target" type="radio">
                             <h3>Standard Delivery Option</h2>
                         <i class="fa-solid fa-chevron-down"></i>
 
                         </div>
-                        <p class="know-more" >Pay digitally with SMS Pay Link. Cash may not be accepted in COVID restricted areas. Know more. <a href=""><strong>know more</strong></a></p>
-                    </span></li>
-                    <li><span class="col1 flx-jst-colmn-mini">
+                    </span>
+                    <p class="know-more" >Pay digitally with SMS Pay Link. Cash may not be accepted in COVID restricted areas. Know more. 
+                        <a href=""><strong>know more</strong>
+                        </a>
+                    </p>
+                </li>
+                <!-- li 2  -->
+                    <li>
+                        <span class="col1 flx-jst-colmn-mini">
                         <div class="mini-flx" >
                             <input class="target" type="radio">
                         <h3>Standard Delivery Option</h2>
                         <i class="fa-solid fa-chevron-down"></i>
 
                         </div>
-                        <form action="">
-                            <div class="myinput">
-                                <input type="text" required >
-                                <label for="">enter credit card</label>
-                            </div>
-                            <div class="myinput">
-                                <input type="text" required >
-                                <label for="">expiry date</label>
-                            </div>
-                            <div class="myinput">
-                                <input type="text" required >
-                                <label for="">cvv number</label>
-                            </div>
-                            <div class="myinput">
-                                <input type="password" required >
-                                <label for="">password</label>
-                            </div>
-                            <div class="btns">
-                                <button class="cncl" >cancel</button>
-                                <button class="btn" >use this card</button>
-                            </div>
-                        </form>
-                    </span></li>
-                    <li><span class="col1">
-                        <div class="spec"> <input class="target" type="radio">
-                            <h3>Standard Delivery Option</h2>
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                        
-                        <div class="net-bank">
-                            <h3>SELECT YOUR BANK</h3>
-                            <div class="checkboxs">
-                                <div class="box mini-flx">
-                                    <input type="radio">
-                                <label for="">Industrial & Commercial Bank</label>
-                                </div>
-                                <div class="box mini-flx">
-                                    <input type="radio">
-                                <label for="">Bank of America</label>
-                                </div>
-                                <div class="box mini-flx">
-                                    <input type="radio">
-                                <label for="">HSBC Holdings</label>
-                                </div>
-                                <div class="box mini-flx">
-                                    <input type="radio">
-                                <label for="">Agricultural Bank</label>
-                                </div>
-                                <div class="box mini-flx">
-                                    <input type="radio">
-                                <label for="">Construction Bank Corp.</label>
-                                </div>
-                                <div class="box mini-flx">
-                                    <input type="radio">
-                                <label for="">JPMorgan Chase & Co.</label>
-                                </div>
-                            </div>
-                            <select name="" id="">
-                                <option value="">HSBC Holdings
-                                </option>
-                                <option value="">Lloyds Banking
-                                    Group</option>
-                                <option value="">Nat West Group
-                                </option>
-                                <option value="">Barclays
-                                </option>
-                                <option value="">Others Bank
-                                </option>
-                            </select>
+                    </span>
+                    <form action="">
+                        <div class="myinput">
+                            <input type="text" required >
+                            <label for="">enter credit card</label>
                         </div>
-                    </span></li>
-                    <li><span class="col1">
-                        <div class="spec"> <input class="target" type="radio">
-                            <h3>Standard Delivery Option</h2>
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                        
-                        <div class="net-bank">
-                            <h3>SELECT YOUR BANK</h3>
-                            <div class="checkboxs">
-                                <div class="box mini-flx">
-                                    <input type="radio">
-                                <label for="">Amazon Pay</label>
-                                </div>
-                                <div class="box mini-flx">
-                                    <input type="radio">
-                                <label for="">
-                                    Airtel Money</label>
-                                </div>
-                                <div class="box mini-flx">
-                                    <input type="radio">
-                                <label for="">JIO Money</label>
-                                </div>
-                                <div class="box mini-flx">
-                                    <input type="radio">
-                                <label for="">Google pay.</label>
-                                </div>
-                                <div class="box mini-flx">
-                                    <input type="radio">
-                                <label for="">Paytm Pay</label>
-                                </div>
-                                <div class="box mini-flx">
-                                    <input type="radio">
-                                <label for="">
-                                    Freecharge</label>
-                                </div>
-                            </div>
+                        <div class="myinput">
+                            <input type="text" required >
+                            <label for="">expiry date</label>
                         </div>
-                    </span></li>
+                        <div class="myinput">
+                            <input type="text" required >
+                            <label for="">cvv number</label>
+                        </div>
+                        <div class="myinput">
+                            <input type="password" required autocomplete="" >
+                            <label for="">password</label>
+                        </div>
+                        <div class="btns">
+                            <button class="cncl" disabled >cancel</button>
+                            <button class="btn" >use this card</button>
+                        </div>
+                    </form>
+                </li>
+                <!-- li 3  -->
+                <li class="nb" >
+                    <span class="col1 flx-jst-colmn-mini">
+                    <div class="mini-flx" >
+                        <input class="target" type="radio">
+                    <h3>Standard Delivery Option</h2>
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+                </span>
+                <div class="net-bank">
+                    <h3>SELECT YOUR BANK</h3>
+                    <div class="checkboxs">
+                        <div class="box mini-flx">
+                            <input type="radio">
+                        <label for="">Industrial & Commercial Bank</label>
+                        </div>
+                        <div class="box mini-flx">
+                            <input type="radio">
+                        <label for="">Bank of America</label>
+                        </div>
+                        <div class="box mini-flx">
+                            <input type="radio">
+                        <label for="">HSBC Holdings</label>
+                        </div>
+                        <div class="box mini-flx">
+                            <input type="radio">
+                        <label for="">Agricultural Bank</label>
+                        </div>
+                        <div class="box mini-flx">
+                            <input type="radio">
+                        <label for="">Construction Bank Corp.</label>
+                        </div>
+                        <div class="box mini-flx">
+                            <input type="radio">
+                        <label for="">JPMorgan Chase & Co.</label>
+                        </div>
+                    </div>
+                    <select name="" id="">
+                        <option value="">HSBC Holdings
+                        </option>
+                        <option value="">Lloyds Banking
+                            Group</option>
+                        <option value="">Nat West Group
+                        </option>
+                        <option value="">Barclays
+                        </option>
+                        <option value="">Others Bank
+                        </option>
+                    </select>
+                </div>
+            </li>
+                <!-- li 4  -->
+                <li class="nb2">
+                    <span class="col1 flx-jst-colmn-mini">
+                    <div class="mini-flx" >
+                        <input class="target" type="radio">
+                    <h3>Standard Delivery Option</h2>
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+                </span>
+                <div class="net-bank">
+                    <h3>SELECT YOUR BANK</h3>
+                    <div class="checkboxs">
+                        <div class="box mini-flx">
+                            <input type="radio">
+                        <label for="">Amazon Pay</label>
+                        </div>
+                        <div class="box mini-flx">
+                            <input type="radio">
+                        <label for="">
+                            Airtel Money</label>
+                        </div>
+                        <div class="box mini-flx">
+                            <input type="radio">
+                        <label for="">JIO Money</label>
+                        </div>
+                        <div class="box mini-flx">
+                            <input type="radio">
+                        <label for="">Google pay.</label>
+                        </div>
+                        <div class="box mini-flx">
+                            <input type="radio">
+                        <label for="">Paytm Pay</label>
+                        </div>
+                        <div class="box mini-flx">
+                            <input type="radio">
+                        <label for="">
+                            Freecharge</label>
+                        </div>
+                    </div>
+                </div>
+            </li>
                 </ul>
             </div>
         </div>

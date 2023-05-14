@@ -120,20 +120,25 @@ input[type="radio"]:checked{
     align-items: start;
 }
 .pay-option ul li{
-    padding: 1rem;
     background: white;
     border-radius: 5px;
     position: relative;
     width: 100%;
-    height: 50px;
-    transition: none;
+    height: 52px;
     overflow: hidden;
+}
+.pay-option ul li .col1{
+    padding: 1rem;
+}
+.know-more{
+    padding-left: 2rem;
 }
 .pay-option ul li.rotate i{
     rotate: 180deg;
 }
-.pay-option ul li.rotate{
-    height: 100%;
+.pay-option ul li {
+    width: 100%;
+    justify-content: start;
 }
 .pay-option ul li  i{
     position: absolute;
@@ -171,20 +176,18 @@ select:focus{
 .pay-option li:nth-child(4),
 .pay-option li:nth-child(3){
     overflow: hidden;
-    transition: .3s;
 }
 .pay-option li:first-child.rotate{
     height: 80px;
-    transition: .3s;
 }
 .pay-option li:nth-child(2).rotate{
-    height: 370px;
+    height: 405px;
 }
 .pay-option li:nth-child(3).rotate{
-    height: 255px;
+    height: 280px;
 }
-.pay-option li:nth-child(3).rotate{
-    height: 186px;
+.pay-option li:nth-child(4).rotate{
+    height: 212px;
 }
 .myinput input:focus ~ label{
     top: -59px !important;
@@ -207,6 +210,9 @@ select:focus{
     border: none;
 
 }
+.cncl:active{
+    box-shadow: 0 0 0px 3px rgb(215, 213, 213);
+}
 .btn{
     width: fit-content;
     height: fit-content;
@@ -219,8 +225,11 @@ select:focus{
     gap: 1rem;
 }
 form{
-    padding-bottom: 0;
+    padding: 1.2rem;
     border: none;
+}
+.net-bank{
+    padding: 1.3rem;
 }
 .checkboxs{
     display: grid;
@@ -230,6 +239,7 @@ form{
 }
 .checkboxs div{
     justify-content: start;
+    width: fit-content;
 }
 .checkboxs label{
     font-size: 15px;
@@ -261,7 +271,7 @@ lord-icon{
 .divs::before{
     content: '';
     width: 3px;
-    height: 644px;
+    height: 596px;
     position: absolute;
     left: -36px;
     top: 0;
@@ -282,5 +292,10 @@ lord-icon{
     .checkboxs {
         grid-template-columns: repeat(1,1fr);
     }
-
+    .pay-option li:nth-child(3).rotate {
+        height: 377px;
+    }
+    .pay-option li:nth-child(4).rotate {
+        height: 311px;
+    }
 }
