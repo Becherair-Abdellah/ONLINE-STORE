@@ -26,7 +26,6 @@ class Radio{
         this.allr.forEach(element => {
             element.parentNode.parentNode.onclick = ()=>{
                 licolumn.forEach((ele)=>{
-                    ele.classList.remove('rotate');
                 });
                 element.parentNode.parentNode.parentNode.classList.toggle('rotate');
                 document.querySelectorAll('.pay-option input[type="radio"]').forEach((ele)=>{

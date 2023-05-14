@@ -298,4 +298,10 @@ lord-icon{
     .pay-option li:nth-child(4).rotate {
         height: 311px;
     }
+    .divs::before{
+        display: none;
+    }
+    lord-icon{
+        display: none;
+    }
 }
