@@ -278,6 +278,87 @@ lord-icon{
     background: transparent;
     border-right: 1px dashed rgb(168, 168, 168);
 }
+.to-product{
+    padding: 0 1rem;
+    background: var(--bg-color2);
+    border-radius: 5px;
+}
+.to-product h3,.to-product ul{
+    border-bottom: 1px solid rgb(231 231 231);
+    padding: 1rem 0;
+    /* margin-bottom: 1rem; */
+}
+.to-product ul li:not(:last-child){
+    margin-bottom: 1.5rem;
+}
+.to-product .name{
+    color: #636363;
+    margin-right: 8px;
+}
+.co-bold{
+    color: gray;
+    font-weight: bold;
+}
+.sz-img{
+    width: 40px;
+}
+.to-product li .price{
+    flex: 1;
+    text-align: end;
+    color: rgb(94 94 94);
+}
+.total{
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(37 37 37);
+}
+.cupon-code{
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.total-usd{
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0.8rem 0;
+    color: rgb(55, 55, 55);
+}
+.available-offers{
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: var(--bg-color2);
+    border-radius: 5px;
+}
+.available-offers span{
+    justify-content: start;
+    color: #3d3d3d;
+}
+.available-offers img{
+    width: 20px;
+}
+.available-offers li{
+    list-style: disc;
+    color: #2f2f2f;
+    padding: 0.4rem 0;
+    font-size: 13px;
+    margin-top: 0.5rem;
+    line-height: 18px;
+    text-align: center;
+}
+.place-order{
+    border: none;
+    background: var(--primary-color);
+    padding: .7rem;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+.checkout{
+    align-items: start;
+}
 @media (max-width:768px){
     .boxes{
         flex-wrap: wrap;
@@ -303,5 +384,16 @@ lord-icon{
     }
     lord-icon{
         display: none;
+    }
+    .pay-option li:first-child.rotate {
+        height: 100px;
+    }
+}
+@media (max-width:1164px){
+    .checkout{
+        display: block;
+    }
+    .to-product{
+        margin-top: 1.5rem;
     }
 }
