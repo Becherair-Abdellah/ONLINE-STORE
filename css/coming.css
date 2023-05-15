@@ -1,0 +1,94 @@
+.t-col{
+    color: #3f3b3b;
+    margin-bottom: .6rem;
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+.st-p{
+    color: #4a5568;
+    line-height: 25px;
+    margin-bottom: 1.5rem;
+    font-size: 15px;
+    text-align: center;
+}
+.countdown{
+    justify-content: center;
+}
+.t-co{
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 30px;
+}
+.coming-soon{
+    width: 60%;
+    text-align: center;
+    padding: 0 10%;
+    translate: 26%;
+}
+.all-times{
+    justify-content: center !important;
+}
+.my-co span:last-child{
+    color: #383838;
+}
+.all-times  div{
+    align-items: center !important;
+    position: relative;
+    gap: 0;
+    padding: 5px 22px;
+    border-radius: 5px;
+    background: white;
+}
+.all-times div:not(:last-child)::before{
+    content: ':';
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    translate: 50% -50%;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.myinput-soon input{
+    height: 50px;
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    border-radius: 3px;
+    padding-left: 10px;
+    font-size: 14px;
+    outline: none;
+}
+.mybtn{
+    position: absolute;
+    height: 100%;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    right: 0px;
+    font-size: 15px;
+    width: 110px;
+    cursor:pointer;
+}
+.myinput-soon{
+    position: relative;
+    margin-top: 2rem;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("/img/commingimg/10001.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+@media (max-width:1200px){
+    .coming-soon{
+        /* padding: 0; */
+        translate: 0;
+        width: 100%;
+    }
+}
