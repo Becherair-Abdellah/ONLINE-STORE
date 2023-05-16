@@ -81,6 +81,55 @@
     display: flex;
     gap: 1rem;
 }
+.content-ask,.some-quest{
+    padding: 1rem;
+}
+.content-ask p{
+    font-size: 14px;
+    color: #696969;
+    line-height: 1.3rem;
+    margin-bottom: 1rem;
+}
+.content-ask p a{
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+.content-ask h1{
+    font-size: 2rem;
+    color: #3a3a3a;
+    margin-bottom: 1rem;
+}
+.q {
+    background: var(--bg-color2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.q button{
+    border: none;
+    background: none;
+    font-size: 17px;
+    padding: 0.5rem 1rem;
+    text-align: start;
+    color: #3a3a3a;
+    display: flex;
+    cursor: pointer;
+}
+.q.color button{
+    color: var(--primary-color);
+    font-weight: bold;
+}
+.q.color i{
+    rotate: 180deg
+}
+.content{
+    color: #767676;
+    font-size: 15px;
+    line-height: 21px;
+    height: 0;
+}
+.content p{
+    padding: 1rem;
+}
 @media (max-width:768px){
     .help-center p{
         padding: 0;
