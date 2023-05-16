@@ -53,6 +53,10 @@ table tr:nth-child(9) td{
 }
 table a{
     color: rgb(73, 73, 73);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
 }
 table a i{
     margin-right: 10px;
