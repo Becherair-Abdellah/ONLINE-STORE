@@ -150,7 +150,6 @@ table,.coupon{
 }
 table{
     padding: 1.3rem;
-    min-width: 950px;
 }
 tr{
     padding: 1rem;
@@ -167,7 +166,7 @@ td:hover img{
     cursor: pointer;
 }
 .cart{
-    padding: 2.5rem 7%;
+    padding: 2.5rem 7% !important;
     gap: 3rem;
     align-items: start; 
 }
@@ -194,7 +193,7 @@ label{
     text-align: start;
     border-bottom: 1px solid rgb(212, 212, 212);
 }
-.coupon .myinput{
+.coupon .myinput-cart{
     position: relative;
 }
 .coupon input{
@@ -248,7 +247,7 @@ label{
     width: 100%;
     margin-top: 1rem;
     border-radius: 7px;
-    justify-content: center;
+    justify-content: center !important;
     font-weight: 600;
     letter-spacing: 1px;
     color: rgb(100, 100, 100);

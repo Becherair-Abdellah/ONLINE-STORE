@@ -149,9 +149,6 @@ console.log(pr.createTdpr());
 console.log(pr.createTdpr());
 console.log(pr.createTdpr());
 console.log(pr.createTdpr());
-console.log(pr.createTdpr());
-console.log(pr.createTdpr());
-console.log(pr.createTdpr());
 // function prompt save products in wish list and progress it
 function progress(){
     if(document.querySelector('.wait-min')){

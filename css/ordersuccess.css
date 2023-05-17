@@ -1,0 +1,224 @@
+.order-su{
+    text-align: center;
+    background: #f8f8f8;
+    padding: 3rem 0;
+}
+.order-su img{
+    width: 200px;
+}
+.order-su h1{
+    color: var(--primary-color);
+}
+.order-su p{
+    color: rgb(76, 76, 76);
+    margin: 1rem 0;
+}
+.checkmark__background{
+    width: 120px;
+    height: 120px;
+    fill: var(--primary-color);
+}
+.checkmark__check{
+    width: 51px;
+    height: 42px;
+    fill: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+.checkmark{
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    padding: 2rem;
+}
+.checkmark .star:first-child{
+    top: 5.3rem;
+    right: 0px;
+}
+.checkmark .star:nth-child(2){
+    right: 5.4rem;
+    top: 0;
+    animation-delay: .5s;
+}
+.checkmark .star:nth-child(3){
+    top: 39px;
+    left: 15px;
+    scale: .5;
+    animation-delay: .5s;
+}
+.checkmark .star:nth-child(4){
+    right: 12px;
+    bottom: 18px;
+    scale: .9;
+    animation-delay: .5s;
+}
+.checkmark .star:nth-child(5){
+    right: 81%;
+    bottom: 11px;
+    scale: .7;
+    animation-delay: .5s;
+}
+.star{
+    position: absolute;
+    fill: var(--primary-color);
+    animation: grow 2s linear infinite;
+}
+@keyframes grow{
+    0%{
+        scale: 0;
+    }
+    50%{
+        scale: 100%;
+    }
+    100%{
+        scale: 0;
+    }
+}
+.sz-img-tb img {
+    width: 60px;
+}
+td:hover img{
+    scale: 1.1;
+    cursor: pointer;
+}
+td{
+    padding-right: 1.5rem;
+}
+td:nth-child(2),
+td:nth-child(3),
+td:nth-child(4){
+    flex: 1;
+}
+table {
+    padding: 1.3rem;
+    background: var(--bg-color2);
+    border-radius: 5px;
+    width: 100%;
+}
+.m-text {
+    color: rgb(86, 86, 86);
+    font-size: 14px;
+}
+.p-text {
+    font-size: 15px;
+    font-weight: 500;
+    color: gray;
+}
+.last {
+    text-decoration: line-through;
+    color: gray;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.cart{
+    padding: 2.5rem 7% !important;
+    gap: 3rem;
+    align-items: start; 
+}
+.cart .container{
+    align-items: start;
+}
+.low-gap {
+    gap: 0.2rem !important;
+}
+.big-pd-right {
+    padding-right: 4rem;
+}
+.total-price {
+    font-weight: 600;
+    font-size: 20px;
+}
+.now {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+td:nth-child(2){
+    color: #2f2f2f;
+}
+tr{
+    margin-bottom: 1.5rem;
+}
+.my-table{
+    flex: 1;
+}
+.pric-detail{
+    background: var(--bg-color2);
+    width: 350px;
+    border-radius: 5px;
+}
+.top{
+    padding: 1rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+.r-co{
+    color:var(--red-color);
+}
+.g-co{
+    color: var(--primary-color);
+}
+.gr-co{
+    color: rgb(86, 86, 86);
+}
+.pric-detail:not(:last-child){
+    margin-bottom: 1rem;
+}
+.pric-detail ul li{
+    color: rgb(56, 56, 56);
+    margin-bottom: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+.pric-detail ul li:last-child{
+    margin: 0;
+}
+ul{
+    padding: 1rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+.total{
+    padding: 0 1rem;
+    font-size: inherit;
+    color: #5f5f5f;
+}
+.top h3{
+    color: rgb(90, 90, 90);
+}
+.info{
+    padding: 1rem;
+    color: rgb(84, 84, 84);
+    align-items: start;
+    gap: 0.4rem;
+}
+.tr-order{
+    color: var(--red-color);
+    font-weight: 700;
+    cursor: pointer;
+}
+.date{
+    padding: 1rem;
+    color: rgb(84, 84, 84);
+}
+.pric-detail p{
+    padding: 1rem;
+    color: rgb(92, 92, 92);
+}
+@media (max-width:1268px){
+    .cart{
+        display: block;
+    }
+    .right{
+        margin-top: 1rem;
+    }
+    .pric-detail{
+        width: 100%;
+    }
+    table{
+        width: 750px;
+    }
+    .my-table{
+        overflow: hidden;
+        overflow-x: visible;
+    }
+}
