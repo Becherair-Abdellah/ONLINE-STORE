@@ -2,10 +2,12 @@
 @tailwind components;
 @layer utilities{
     .active{
-       @apply bg-[#0da4871f] text-[#0da487] font-semibold  border-l-4 border-[#0da487];
+       @apply bg-[#0da4871f] text-[#0da487];
+       @apply after:content-normal after:bg-[#0da487] after:left-0 after:top-0 after:absolute after:w-[4px] after:h-full
     }
 }
-*{
+*,
+*::after,*::before{
     transition: .3s;
 }
 @tailwind utilities;
