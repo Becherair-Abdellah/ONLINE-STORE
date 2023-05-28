@@ -13,7 +13,7 @@
     <title>user dashboard</title>
 </head>
 
-<body class="bg-red-500">
+<body>
     <div class="bg-slate-50">
         <div class="container w-11/12 mx-auto flex justify-between items-center p-5">
             <h1 class="text-2xl font-semibold text-gray-700 capitalize">user dashboard</h1>
@@ -24,52 +24,55 @@
             </div>
         </div>
     </div>
-    <section class="dash-user">
-        <div class="pro-file">
-            <div class="inside-profile">
-                <div class="info">
+    <section class="dash-user container w-11/12 mx-auto p-5 grid grid-cols-4 gap-5">
+        <div class="pro-file col-span-1 bg-gray-50 ">
+            <div class="inside-profil ">
+                <div class="info text-center">
                     <img src="/img/dashuser/10001.jpg" alt="">
                     <!-- info user img -->
-                    <div class="info-user">
-                        <img src="/img/dashuser/10002.jpg" alt="">
-                        <h1>Vicki E. Pope</h1>
-                        <h2>vicki.pope@gmail.com</h2>
+                    <div class="info-user p-4">
+                       <div class="border-b-[1px] border-gray-200 pb-2" >
+                        <img class="w-36 h-36 rounded-full shadow-lg mx-auto mb-2 border-white border-8" src="/img/dashuser/10002.jpg" alt="">
+                        <h1 class="font-bold text-gray-800 text-2xl" >Vicki E. Pope</h1>
+                        <h2 class="text-gray-500">vicki.pope@gmail.com
+                        </h2>
+                       </div>
                     </div>
                 </div>
 
                 <ul class="tools" >
-                    <li class="flex items-center gap-3 text-gray-600 text-lg">
+                    <li class="flex items-center gap-3 text-gray-600 px-4 py-2 text-lg">
                         <i class="fa-solid fa-house"></i>
                         <h2>dashboard</h2>
                     </li>
-                    <li class="flex items-center gap-3 text-gray-600 text-lg">
+                    <li class="flex items-center gap-3 text-gray-600 px-4 py-2 text-lg">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <h2>order</h2>
                     </li>
-                    <li class="flex items-center gap-3 text-gray-600 text-lg">
+                    <li class="flex items-center gap-3 text-gray-600 px-4 py-2 text-lg">
                         <i class="fa-regular fa-heart"></i>
                         <h2>wishlist</h2>
                     </li>
-                    <li class="flex items-center gap-3 text-gray-600 text-lg">
+                    <li class="flex items-center gap-3 text-gray-600 px-4 py-2 text-lg">
                         <i class="fa-regular fa-credit-card"></i>
                         <h2>saved card</h2>
                     </li>
-                    <li class="flex items-center gap-3 text-gray-600 text-lg">
+                    <li class="flex items-center gap-3 text-gray-600 px-4 py-2 text-lg">
                         <i class="fa-solid fa-location-dot"></i>
                         <h2>address</h2>
                     </li>
-                    <li class="flex items-center gap-3 text-gray-600 text-lg">
+                    <li class="flex items-center gap-3 text-gray-600 px-4 py-2 text-lg">
                         <i class="fa-regular fa-user"></i>
                         <h2>profile</h2>
                     </li>
-                    <li class="flex items-center gap-3 text-gray-600 text-lg">
+                    <li class="flex items-center gap-3 text-gray-600 px-4 py-2 text-lg active">
                         <i class="fa-solid fa-shield-halved"></i>
                         <h2>privacy</h2>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="contnet">
+        <div class="contnet col-span-3 " >
             <div class="tab-content">
                 <h1>My Dashboard</h1>
                 <div>Hello, <strong>Vicki E. Pope</strong></div>

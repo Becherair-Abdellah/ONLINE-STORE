@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
+@layer utilities{
+    .active{
+       @apply bg-[#0da4871f] text-[#0da487] font-semibold  border-l-4 border-[#0da487];
+    }
+}
+*{
+    transition: .3s;
+}
 @tailwind utilities;
