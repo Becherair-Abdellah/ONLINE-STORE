@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="selection:text-white selection:bg-red-500">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script defer src="/js/dashuser.js " ></script>
+    <script defer src="/js/dashuser.js "></script>
     <title>user dashboard</title>
 </head>
 
@@ -29,88 +29,144 @@
         <div class="pro-file col-span-1 bg-gray-50 h-fit pb-3 rounded-b-lg">
             <div class="inside-profil ">
                 <div class="info text-center">
-                    <img class="rounded-lg rounded-b-none "  src="/img/dashuser/10001.jpg" alt="">
+                    <img class="rounded-lg rounded-b-none h-40 w-full " src="/img/dashuser/10001.jpg" alt="">
                     <!-- info user img -->
                     <div class="info-user p-4 h-40">
-                       <div class="border-b-[1px] border-gray-200 pb-2 relative  top-1/5 left-1/2 -translate-x-1/2 -translate-y-1/2" >
-                        <img class="w-36 h-36 rounded-full shadow-lg mx-auto mb-2 border-white border-8" src="/img/dashuser/10002.jpg" alt="">
-                        <h1 class="font-bold text-gray-800 text-2xl" >Vicki E. Pope</h1>
-                        <h2 class="text-gray-500">vicki.pope@gmail.com
-                        </h2>
-                       </div>
+                        <div
+                            class="border-b-[1px] border-gray-200 pb-2 relative  top-[20%] left-1/2 -translate-x-1/2 -translate-y-1/2">
+                            <img class="w-28 h-28 rounded-full shadow-lg mx-auto mb-2 border-white border-[7px]"
+                                src="/img/dashuser/10002.jpg" alt="">
+                            <h1 class="font-bold text-gray-800 text-2xl">Vicki E. Pope</h1>
+                            <h2 class="text-gray-500">vicki.pope@gmail.com
+                            </h2>
+                        </div>
                     </div>
                 </div>
 
-                <ul class="tools" >
-                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-2 text-lg active cursor-pointer">
+                <ul class="tools">
+                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg active cursor-pointer ">
                         <i class="fa-solid fa-house"></i>
                         <h2>dashboard</h2>
                     </li>
-                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-2 text-lg cursor-pointer">
+                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg  cursor-pointer">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <h2>order</h2>
                     </li>
-                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-2 text-lg cursor-pointer">
+                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg cursor-pointer">
                         <i class="fa-regular fa-heart"></i>
                         <h2>wishlist</h2>
                     </li>
-                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-2 text-lg cursor-pointer">
+                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg cursor-pointer">
                         <i class="fa-regular fa-credit-card"></i>
                         <h2>saved card</h2>
                     </li>
-                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-2 text-lg cursor-pointer">
+                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg cursor-pointer">
                         <i class="fa-solid fa-location-dot"></i>
                         <h2>address</h2>
                     </li>
-                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-2 text-lg cursor-pointer">
+                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg cursor-pointer">
                         <i class="fa-regular fa-user"></i>
                         <h2>profile</h2>
                     </li>
-                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-2 text-lg cursor-pointer">
+                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg cursor-pointer">
                         <i class="fa-solid fa-shield-halved"></i>
                         <h2>privacy</h2>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="contnet col-span-3 " >
+        <div class="contnet col-span-3 p-5 bg-gray-50 rounded-md ">
             <div class="tab-content">
-                <h1>My Dashboard</h1>
-                <div>Hello, <strong>Vicki E. Pope</strong></div>
-                <p>From your My Account Dashboard you have the ability to view a snapshot of your recent account activity and update your account information. Select a link below to view or edit information.</p>
-                <div class="boxes">
-                    <div class="box">
-                        <img src="/img/dashuser/10003.svg" alt="">
-                        <div class="descrp">
-                            <span>Total Order</span>
-                            <span>3658</span>
+                <h1 class="w-fit text-3xl font-bold text-gray text-gray-800 after relative mb-7">My Dashboard
+                    <svg class="absolute bg-gray-50 z-10 px-3 w-12 h-6 left-[15%]" width="31" height="27"
+                        viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19.8953 12.1549C20.7505 12.1561 21.4467 11.4607 21.4467 10.6069C21.4467 9.75351 20.7511 9.05787 19.8977 9.05787C14.1928 9.05787 9.88347 10.7032 6.69324 12.8055C6.71872 12.6287 6.74941 12.4513 6.78582 12.2733C7.51891 8.6918 10.387 5.78641 13.9516 4.9573C15.5022 4.59816 16.9939 4.62898 18.3692 4.95619C21.8506 5.78428 25.7595 4.50208 27.7216 1.10608L27.7219 1.10549C27.765 1.03073 27.8347 0.998023 27.9055 1.00009C27.9728 1.00206 28.0231 1.03303 28.0523 1.0978L28.0526 1.09865C28.9772 3.15168 29.5015 5.68618 29.5015 8.13234C29.5015 15.3466 25.5577 21.3113 19.7439 23.2336L19.7268 23.2392L19.7102 23.2458C18.6145 23.6798 17.4259 23.926 16.1806 23.926C12.6426 23.926 9.35009 21.9344 7.68468 18.7696L7.3091 18.0558L6.71626 18.6026C3.48841 21.5801 2.57971 24.9791 2.52798 25.1935C2.44354 25.5469 2.1264 25.7872 1.77543 25.7872C1.71776 25.7872 1.65629 25.7804 1.59281 25.7657C1.17813 25.6649 0.922285 25.2464 1.02128 24.8318C1.27532 23.7875 2.53537 20.6044 5.46995 17.6901C8.38552 14.7947 12.9618 12.155 19.8953 12.1549ZM19.8953 12.1549C19.8951 12.1549 19.8949 12.1549 19.8947 12.1549L19.8958 11.5353V12.1549C19.8957 12.1549 19.8954 12.1549 19.8953 12.1549Z"
+                            stroke="#0da487" />
+                    </svg>
+
+                </h1>
+                <div class="text-gray-600 mb-5 ">Hello, <strong class="text-gray-900">Vicki E. Pope</strong></div>
+                <p class="text-gray-500 text-[15.5px] mb-8">From your My Account Dashboard you have the ability to view
+                    a snapshot of your recent account
+                    activity and update your account information. Select a link below to view or edit information.</p>
+                <div class="boxes flex items-center justify-between gap-6 mb-8">
+                    <!-- box  -->
+                    <div class="relative overflow-hidden box flex items-center p-5 rounded-lg bg-white w-full s-h">
+                        <img class="w-16" src="/img/dashuser/10003.svg" alt="">
+                        <div class="descrp flex flex-col ml-5">
+                            <span class="text-gray-500 text-lg">Total Order</span>
+                            <span class="text-xl font-semibold">658</span>
+                        </div>
+                        <svg class="absolute w-16 h-16 -right-5 scale-125 fill-gray-100 hover:scale-150 hover:-rotate-12 hover:-translate-x-2" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M124.7 1.39999C119.3 3.39999 113.6 7.39999 110.7 11.2C106.6 16.7 35.8999 139.9 34.3999 144.2C33.1999 147.6 32.9999 173.7 32.9999 314.4C32.9999 489 32.8999 485.2 37.2999 493.6C39.9999 498.8 47.7999 506 53.7999 508.8L59.4999 511.5H256H452.5L458.2 508.8C464.2 506 472 498.8 474.7 493.6C479.1 485.2 479 489.1 479 313.2C479 154.4 478.9 145.7 477.2 142.2C473.1 133.7 402.4 12.3 399.9 9.49999C398.4 7.79999 394.7 5.09999 391.8 3.39999L386.5 0.499992L257.5 0.299992C150.7 0.0999924 127.8 0.299992 124.7 1.39999ZM241 78.5V127H160C115.5 127 78.9999 126.7 78.9999 126.4C78.9999 126.1 91.3999 104.3 106.6 77.9L134.2 30H187.6H241V78.5ZM404.9 76.9C419.8 102.7 432.2 124.5 432.6 125.4C433.2 126.9 426.7 127 352.6 127H272V78.5V30H324.9H377.8L404.9 76.9ZM449 317.5C449 476.7 449 478 447 480C445 482 443.7 482 256 482C68.3 482 66.9999 482 64.9999 480C62.9999 478 62.9999 476.7 62.9999 317.5V157H256H449V317.5Z"/>
+                            <path d="M306 267.6C304.6 268.5 288.2 284.5 269.5 303.1L235.5 337L222 323.4C214.6 316 207.3 309.2 205.8 308.4C197.9 304.3 187 309.5 185 318.5C183.3 325.9 184.7 328 206.3 349.8C217.4 361 227.7 370.8 229.2 371.6C232.7 373.4 239.3 373.4 242.8 371.6C244.3 370.8 263.8 351.8 286.2 329.3C321.1 294.3 327 287.9 327.9 284.4C329.6 278 327.1 271.7 321.3 267.9C317.7 265.5 309.4 265.4 306 267.6Z"/>
+                            </svg>
+                    </div>
+                    <!-- box  -->
+                    <div class="box flex items-center p-5 rounded-lg bg-white w-full s-h">
+                        <img class="w-16" src="/img/dashuser/10003.svg" alt="">
+                        <div class="descrp flex flex-col ml-5">
+                            <span class="text-gray-500 text-lg">Total Order</span>
+                            <span class="text-xl font-semibold">658</span>
+                        </div>
+                    </div>
+                    <!-- box  -->
+                    <div class="relative box flex items-center p-5 rounded-lg bg-white w-full s-h custom-bg ">
+                        <img class="w-16" src="/img/dashuser/10004.svg" alt="">
+                        <div class="descrp flex flex-col ml-5">
+                            <span class="text-gray-500 text-lg">Total Order</span>
+                            <span class="text-xl font-semibold">658</span>
                         </div>
                     </div>
                 </div>
                 <!-- last part -->
                 <div class="last-part">
-                    <h1>Account Information</h1>
-                    <div class="info-1">
+                    <h1 class="text-xl font-medium mb-6">Account Information</h1>
+                    <div class="info-1 flex items-start justify-between gap-5">
                         <!-- div1 -->
-                        <div class="d1">
-                            <div class="i1">
-                                <h1>Contact Information</h1>
-                                <span>edit</span>
+                        <div class="d1 w-full">
+                            <div class="i1 flex items-center justify-between py-1 border-b-[1px] border-gray-200">
+                                <h1 class="text-lg text-gray-800">Contact Information</h1>
+                                <span class="text-[#0da487] capitalize cursor-pointer">edit</span>
                             </div>
-                            <h3>MARK JECNO</h3>
-                            <h4>MARK JECNO</h4>
-                            <span>Change Password</span>
+                            <div class="py-4">
+                                <h3 class="text-gray-500 text-[15px]">MARK JECNO</h3>
+                                <h4 class="text-gray-500 text-sm my-3">vicki.pope@gmail.com</h4>
+                                <span class="text-[#0da487] text-sm cursor-pointer">Change Password</span>
+                            </div>
                         </div>
-                        <div class="d2">
-                            <div class="i2">
-                                <h1>Newsletters</h1>
-                                <span>edit</span>
+                        <div class="d2 w-full">
+                            <div
+                                class="i2 flex items-center justify-between w-full py-1 border-b-[1px] border-gray-200">
+                                <h1 class="text-lg text-gray-800">Newsletters</h1>
+                                <span class="text-[#0da487] capitalize cursor-pointer">edit</span>
                             </div>
-                            <p>You are currently not subscribed to any newsletter</p>
+                            <p class="mt-5 text-gray-500 text text-sm">You are currently not subscribed to any
+                                newsletter</p>
                         </div>
                     </div>
                     <!-- next step -->
-                    <div class="info-2"></div>
+
+                    <div class="d2 w-full">
+                        <div class="i2 flex items-center justify-between w-full py-1 border-b-[1px] border-gray-200">
+                            <h1 class="text-lg text-gray-800">Address Book </h1>
+                            <span class="text-[#0da487] capitalize cursor-pointer">edit</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="w-full text-gray-500 py-3 flex flex-col gap-2 text-sm">
+                                <span>Default Billing Address</span>
+                                <span>You have not set a default billing address.</span>
+                                <span class="text-[#0da487] capitalize cursor-pointer">Edit Address</span>
+                            </div>
+                            <div class="w-full text-gray-500 py-3 flex flex-col gap-2 text-sm">
+                                <span>Default Billing Address</span>
+                                <span>You have not set a default billing address.</span>
+                                <span class="text-[#0da487] capitalize cursor-pointer">Edit Address</span>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>

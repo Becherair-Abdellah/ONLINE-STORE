@@ -5,9 +5,18 @@
        @apply bg-[#0da4871f] text-[#0da487];
        @apply after:content-normal after:bg-[#0da487] after:left-0 after:top-0 after:absolute after:w-[4px] after:h-full
     }
+    .after{
+        @apply after:content-normal after:w-full after:h-[2px] after:bg-[#0da487] after:bottom-0 after:left-0 after:absolute after:w-[120px] pb-4; 
+    }
+    .s-h{
+        box-shadow: 0px 0px 10px -5px gray;
+    }
 }
 *,
 *::after,*::before{
     transition: .3s;
+}
+*::selection{
+    @apply text-white bg-[#0da487];
 }
 @tailwind utilities;
