@@ -6,11 +6,19 @@
        @apply after:content-normal after:bg-[#0da487] after:left-0 after:top-0 after:absolute after:w-[4px] after:h-full
     }
     .after{
-        @apply after:content-normal after:w-full after:h-[2px] after:bg-[#0da487] after:bottom-0 after:left-0 after:absolute after:w-[120px] pb-4; 
+        @apply after:content-normal after:h-[2px] after:bg-[#0da487] after:bottom-0 after:left-0 after:absolute after:w-[120px] pb-4; 
     }
     .s-h{
         box-shadow: 0px 0px 10px -5px gray;
     }
+    .s-h:hover svg{
+        @apply scale-150 -rotate-12 -translate-x-2
+    }
+    .b-t{
+        /* @apply bg-green; */
+        @apply font-bold text-[16px] !important;
+    }
+
 }
 *,
 *::after,*::before{
@@ -18,5 +26,11 @@
 }
 *::selection{
     @apply text-white bg-[#0da487];
+}
+.overlay{
+    @apply after:content-normal after:w-full after:h-full after:bg-[#000000a1] after:top-0 after:left-0 after:absolute after:z-10; 
+}
+.tr-lt{
+    @apply -translate-y-[50%] opacity-[1] !important ; 
 }
 @tailwind utilities;
