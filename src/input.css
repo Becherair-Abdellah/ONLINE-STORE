@@ -18,7 +18,9 @@
         /* @apply bg-green; */
         @apply font-bold text-[16px] !important;
     }
-
+    .zindex-11{
+        @apply z-[111] !important;
+    }
 }
 *,
 *::after,*::before{
