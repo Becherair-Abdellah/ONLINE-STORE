@@ -15,7 +15,8 @@
     <title>user dashboard</title>
 </head>
 
-<body class='relative' >
+<body class='relative ' >
+    <span class="myoverlay"></span>
     <div class="bg-slate-50">
         <div class="container w-10/12 mx-auto flex justify-between items-center p-5">
             <h1 class="sm:text-2xl font-semibold text-gray-700 capitalize">user dashboard</h1>
@@ -27,8 +28,9 @@
         </div>
     </div>
     <section class="dash-user container w-10/12 mx-auto py-12 grid grid-cols-1 lg:grid-cols-4 lg:gap-5">
-        <div class="pro-file col-span-1 bg-gray-50 h-fit pb-3 rounded-b-lg">
-            <div class="inside-profil absolute z-[11] bg-gray-50 shadow-md xl:shadow-none w-[320px] top-0 left-0 xl:w-full h-full xl:relative">
+        <button class="btn" >show more</button>
+        <div class="pro-file col-span-1  pb-3 rounded-b-lg fixed z-[11] bg-gray-50 shadow-md xl:shadow-none w-[320px] top-0 left-[-320px] lg:left-0 lg:w-full h-full lg:relative lg:z-0">
+            <div class="inside-profil ">
                 <div class="info text-center">
                     <img class="xl:rounded-lg rounded-b-none h-40 w-full " src="/img/dashuser/10001.jpg" alt="">
                     <!-- info user img -->
@@ -43,37 +45,38 @@
                         </div>
                     </div>
                 </div>
-
-                <ul class="tools">
-                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg active cursor-pointer ">
-                        <i class="fa-solid fa-house"></i>
-                        <h2>dashboard</h2>
-                    </li>
-                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg  cursor-pointer">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <h2>order</h2>
-                    </li>
-                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg cursor-pointer">
-                        <i class="fa-regular fa-heart"></i>
-                        <h2>wishlist</h2>
-                    </li>
-                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg cursor-pointer">
-                        <i class="fa-regular fa-credit-card"></i>
-                        <h2>saved card</h2>
-                    </li>
-                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg cursor-pointer">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <h2>address</h2>
-                    </li>
-                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg cursor-pointer">
-                        <i class="fa-regular fa-user"></i>
-                        <h2>profile</h2>
-                    </li>
-                    <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg cursor-pointer">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <h2>privacy</h2>
-                    </li>
-                </ul>
+                <div>
+                    <ul class="tools h-[308px] overflow-hidden overflow-y-visible lg:h-full lg:overflow-visible">
+                        <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg active cursor-pointer ">
+                            <i class="fa-solid fa-house"></i>
+                            <h2>dashboard</h2>
+                        </li>
+                        <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg  cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <h2>order</h2>
+                        </li>
+                        <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg cursor-pointer">
+                            <i class="fa-regular fa-heart"></i>
+                            <h2>wishlist</h2>
+                        </li>
+                        <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg cursor-pointer">
+                            <i class="fa-regular fa-credit-card"></i>
+                            <h2>saved card</h2>
+                        </li>
+                        <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg cursor-pointer">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <h2>address</h2>
+                        </li>
+                        <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg cursor-pointer">
+                            <i class="fa-regular fa-user"></i>
+                            <h2>profile</h2>
+                        </li>
+                        <li class="relative flex items-center gap-3 text-gray-600 px-4 py-4 text-lg cursor-pointer">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <h2>privacy</h2>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="contnet col-span-3 p-5 bg-gray-50 rounded-md ">
@@ -182,7 +185,7 @@
         </div>
     </section>
     <!-- forms  -->
-<div class="flex-none myforms absolute left-1/2 top-1/2 bg-white -translate-x-1/2 -translate-y-[60%] z-[-1] w-[50%] p-4 rounded-md opacity-0 ">
+<div class="flex-none myforms absolute left-1/2 top-1/2 bg-white -translate-x-1/2 -translate-y-[60%] w-[50%] p-4 rounded-md opacity-0 z-[11]">
     <button class="text-white font-bold py-[7px] cursor-pointer px-3 bg-[#0da487] rounded-md absolute -right-3 -top-3" id="close" >x</button>
     <div class=" ">
       <h2 class="text-start text-xl font-bold leading-9 tracking-tight text-gray-800 mb-8">edit profile</h2>
