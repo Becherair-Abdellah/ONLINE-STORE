@@ -57,6 +57,7 @@ btn_menu_bar.onclick = () => {
     document.querySelector('.pro-file').classList.add('toRight');
     document.querySelector('.myoverlay').classList.add('overlay');
     body.classList.add('overflow-hidden');
+    document.querySelector('.btnclose')?document.querySelector('.btnclose').remove():'';
     let creat_btn = document.createElement('button');
     creat_btn.innerText = 'x';
     creat_btn.classList = 'btnclose';

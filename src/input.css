@@ -31,16 +31,20 @@
     @apply text-white bg-[#0da487];
 }
 .overlay{
-    @apply w-full h-[100%] bg-[#000000a1] top-0 left-0 absolute z-[11]; 
+    @apply w-full h-[100vh] bg-[#000000a1] top-0 left-0 absolute z-[11]; 
 }
 .tr-lt{
-    @apply -translate-y-[50%] opacity-[1] !important ; 
+    @apply xl:-translate-y-[50%] xl:opacity-[1] !important ; 
 }
 .tr-lt-none{
-    @apply -translate-y-[60%] opacity-[0] !important ; 
+    @apply xl:-translate-y-[60%] xl:opacity-[0] !important ; 
 }
 .btn{
-    @apply w-fit text-[16px] mb-5 p-3 lg:hidden !important;
+    @apply w-fit text-[16px] p-3 !important;
+}
+.btn.top{
+    @apply lg:hidden mb-5 !important;
+
 }
 .toRight{
     @apply left-0 !important;
