@@ -22,6 +22,12 @@
     .zindex-11{
         @apply z-[11]  !important;
     }
+    .btn{
+        @apply text-sm h-[40px] w-fit px-[1rem] !important;
+    }
+    .myoverlay{
+        @apply bg-[#000000a8] w-full h-full absolute left-0 top-0 z-[11];
+    }
 }
 *,
 *::after,*::before{
@@ -30,26 +36,7 @@
 *::selection{
     @apply text-white bg-[#0da487];
 }
-.overlay{
-    @apply w-full h-[100vh] bg-[#000000a1] top-0 left-0 absolute z-[11]; 
-}
-.tr-lt{
-    @apply xl:-translate-y-[50%] xl:opacity-[1] !important ; 
-}
-.tr-lt-none{
-    @apply xl:-translate-y-[60%] xl:opacity-[0] !important ; 
-}
-.btn{
-    @apply w-fit text-[16px] p-3 !important;
-}
-.btn.top{
-    @apply lg:hidden mb-5 !important;
-
-}
-.toRight{
-    @apply left-0 !important;
-}
-.btnclose{
-    @apply absolute right-2 top-2 bg-gray-400 w-5 p-4 flex justify-center items-center h-5 text-white font-bold rounded-full z-10 lg:hidden !important;
+.bl-imp{
+    @apply block !important;
 }
 @tailwind utilities;

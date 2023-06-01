@@ -15,10 +15,10 @@
     <title>user dashboard</title>
 </head>
 
-<body class='relative ' >
-    <span class="myoverlay"></span>
+<body class='relative' >
+    <span class="pesudo"></span>
     <div class="bg-slate-50">
-        <div class="container w-10/12 mx-auto flex justify-between items-center p-5">
+        <div class="container w-10/12 mx-auto flex justify-between items-center p-2 py-5 xl:p-5">
             <h1 class="sm:text-2xl font-semibold text-gray-700 capitalize">user dashboard</h1>
             <div class="flex items-center gap-2">
                 <i class="fa-solid fa-house text-gray-500 cursor-pointer"></i>
@@ -28,7 +28,7 @@
         </div>
     </div>
     <section class="dash-user container w-10/12 mx-auto py-12 grid grid-cols-1 lg:grid-cols-4 lg:gap-5">
-        <button class="btn top" >show more</button>
+        <button class="btn top mb-5 text-sm lg:hidden" id="show-more">show more</button>
         <div class="pro-file col-span-1  pb-3 rounded-b-lg fixed z-[11] bg-gray-50 shadow-md xl:shadow-none w-[320px] top-0 left-[-320px] lg:left-0 lg:w-full h-full lg:relative lg:z-0">
             <div class="inside-profil ">
                 <div class="info text-center">
@@ -185,18 +185,19 @@
         </div>
     </section>
     <!-- forms  -->
-<div class="flex-none myforms w-full h-full fixed  xl:left-1/2  -top-1/5 xl:top-1/2 bg-white xl:-translate-x-1/2 xl:-translate-y-[60%] xl:w-[50%] p-4 rounded-md opacity-0 z-[11] translate-x-0 translate-y-1/2">
-    <button class="text-white font-bold py-[7px] cursor-pointer px-3 bg-[#0da487] rounded-md absolute -right-3 -top-3" id="close" >x</button>
-    <div class=" ">
-      <h2 class="text-start text-xl font-bold leading-9 tracking-tight text-gray-800 mb-8">edit profile</h2>
+    <!-- after test set hidden w-full h-full please  -->
+<div class="myforms fixed hidden w-full h-full  left-0 top-0 bg-white px-[1rem] z-11 xl:w-1/2 xl:h-5/6 xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2 ">
+    <div class="flex items-center justify-between mb-8 py-2">
+      <h2 class="text-start text-xl font-bold leading-9 tracking-tight text-gray-800">edit profile</h2>
+      <button class="text-white font-bold py-[7px] cursor-pointer px-3 bg-[#0da487] rounded-md -right-3 -top-3" id="close" >x</button>
     </div>
   
-    <div  >
+    <div class="h-full" >
       <form class="space-y-6 border-none pb-0" action="#" method="POST">
         <div class="relative" >
           <label for="email" class="absolute block text-sm font-medium leading-6 text-gray-900 bg-white left-[15px] top-[-10px] py-0 px-[10px] ">Fully Name</label>
           <div class="mt-2">
-            <input id="text" name="text" type="text" autocomplete="email" required class="block w-full rounded-[5px] border-0 py-3 pl-4 text-lg text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none" value="Abdellah Becherair" >
+            <input id="text" name="text" type="text" autocomplete="email" required class="block w-full rounded-[5px] border-0 py-3 pl-4 text-[16px] normal-case text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none" value="Abdellah Becherair" >
           </div>
         </div>
         <div class="flex gap-5" >
@@ -206,7 +207,7 @@
                   bg-white left-[12px] top-[-5px] py-0 px-3">Email Address</label>
                 </div>
                 <div class="mt-2">
-                  <input id="email" name="email" type="email" autocomplete="current-password" required class="block w-full rounded-[5px] border-0 py-3 pl-4 text-lg text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none" value="abdellah.becherair@gmail.com" >
+                  <input id="email" name="email" type="email" autocomplete="current-password" required class="block w-full rounded-[5px] border-0 py-3 pl-4 text-[16px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none normal-case" value="abdellah.becherair@gmail.com" >
                 </div>
               </div>
               <div class="relative w-full">
@@ -215,7 +216,7 @@
                     bg-white left-[12px] top-[-5px] py-0 px-3">Email Address</label>
                   </div>
                   <div class="mt-2">
-                    <input id="email" name="email" type="email" autocomplete="current-password" required class="block w-full rounded-[5px] border-0 py-3 pl-4 text-lg text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none" value="4567891234">
+                    <input id="email" name="email" type="email" autocomplete="current-password" required class="block w-full rounded-[5px] border-0 py-3 pl-4 text-[16px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none normal-case" value="4567891234">
                   </div>
                 </div>
         </div>
@@ -223,21 +224,20 @@
         <div class="relative" >
             <label for="email" class="absolute block text-sm font-medium leading-6 text-gray-900 bg-white left-[15px] top-[-10px] py-0 px-[10px] ">Add Address</label>
             <div class="mt-2">
-              <input id="text" name="text" type="text" autocomplete="email" required class="block w-full rounded-[5px] border-0 py-3 pl-4 text-lg text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none" value="8424 James Lane South San Francisco" >
+              <input id="text" name="text" type="text" autocomplete="email" required class="block w-full rounded-[5px] border-0 py-3 pl-4 text-[16px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none normal-case" value="8424 James Lane South San Francisco" >
             </div>
           </div>
           <div class="relative" >
             <label for="email" class="absolute block text-sm font-medium leading-6 text-gray-900 bg-white left-[15px] top-[-10px] py-0 px-[10px] ">Add Address 2</label>
             <div class="mt-2">
-              <input id="text" name="text" type="text" autocomplete="email" required class="block w-full rounded-[5px] border-0 py-3 pl-4 text-lg text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none" value="CA 94080" >
+              <input id="text" name="text" type="text" autocomplete="email" required class="block w-full rounded-[5px] border-0 py-3 pl-4 text-[16px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none normal-case" value="CA 94080" >
             </div>
           </div>
           <div class="flex justify-between items-center gap-5" >
                 <div class="relative w-full" >
                 <label for="email" class="absolute block text-sm font-medium leading-6 text-gray-900 bg-white left-[15px] top-[-4px] py-0 px-[10px] ">Country</label>
                 <div class="mt-2">
-                  <!-- <input id="text" name="text" type="text" autocomplete="email" required class="block w-full rounded-[5px] border-0 py-3 pl-4 text-lg text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none" value="CA 94080" > -->
-                  <select class="block w-full rounded-[5px] border-0 py-3 pl-4 text-lg text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none bg-transparent " name="select" id="select" >
+                  <select class="block w-full rounded-[5px] border-0 py-3 pl-4 text-[16px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none bg-transparent " name="select" id="select" >
                     <option value="">algeria</option>
                     <option value="">english</option>
                     <option value="">russia</option>
@@ -254,7 +254,7 @@
                 <label for="email" class="absolute block text-sm font-medium leading-6 text-gray-900 bg-white left-[15px] top-[-4px] py-0 px-[10px] ">City</label>
                 <div class="mt-2">
                   <!-- <input id="text" name="text" type="text" autocomplete="email" required class="block w-full rounded-[5px] border-0 py-3 pl-4 text-lg text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none" value="CA 94080" > -->
-                  <select class="block w-full rounded-[5px] border-0 py-3 pl-4 text-lg text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none bg-transparent " name="select" id="select" >
+                  <select class="block w-full rounded-[5px] border-0 py-3 pl-4 text-[16px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none bg-transparent " name="select" id="select" >
                     <option value="">algeria</option>
                     <option value="">english</option>
                     <option value="">russia</option>
@@ -271,7 +271,7 @@
                 <label for="email" class="absolute block text-sm font-medium leading-6 text-gray-900 bg-white left-[15px] top-[-4px] py-0 px-[10px] ">Pin Code</label>
                 <div class="mt-2">
                   <!-- <input id="text" name="text" type="text" autocomplete="email" required class="block w-full rounded-[5px] border-0 py-3 pl-4 text-lg text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none" value="CA 94080" > -->
-                  <select class="block w-full rounded-[5px] border-0 py-3 pl-4 text-lg text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none bg-transparent " name="select" id="select" >
+                  <select class="block w-full rounded-[5px] border-0 py-3 pl-4 text-[16px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none bg-transparent " name="select" id="select" >
                     <option value="">algeria</option>
                     <option value="">english</option>
                     <option value="">russia</option>
@@ -284,9 +284,9 @@
                 </div>
               </div>
           </div >
-          <div class="flex justify-end" >
-            <div class="mr-2" >
-                <button id="close" class="btn  text-md px-5  b-t ">Close</button>
+          <div class="flex justify-end absolute bottom-[1rem] right-[1rem]" >
+            <div class="mr-2 " >
+                <span id="close" class="btn  text-md px-5  b-t flex justify-center items-center h-[30px] ">Close</span>
               </div>
               <!-- next button  -->
               <div class="flex " >
