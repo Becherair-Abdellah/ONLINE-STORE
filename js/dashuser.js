@@ -19,6 +19,9 @@ edits.forEach((ele)=>{
         contnet_show.classList.add('bl-imp');
         my_body.classList.add('overflow-hidden');
         pesudo.classList.add('myoverlay');
+        setTimeout(()=>{
+            contnet_show.classList.add('animate');
+        },100);
     };
 });
 // close buttons at forms
@@ -29,6 +32,7 @@ all_close.forEach((ele)=>{
         contnet_show.classList.remove('bl-imp');
         my_body.classList.remove('overflow-hidden');
         pesudo.classList.remove('myoverlay');
+        contnet_show.classList.remove('animate');
         
     }
 });

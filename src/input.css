@@ -25,9 +25,6 @@
     .btn{
         @apply text-sm h-[40px] w-fit px-[1rem] !important;
     }
-    .myoverlay{
-        @apply bg-[#000000a8] w-full h-full absolute left-0 top-0 z-[11];
-    }
 }
 *,
 *::after,*::before{
@@ -38,5 +35,11 @@
 }
 .bl-imp{
     @apply block !important;
+}
+.myoverlay{
+    @apply bg-[#000000a8] w-full h-[100vh] absolute left-0 top-0 z-[11];
+}
+.animate{
+    @apply top-[50%] opacity-[1] !important;
 }
 @tailwind utilities;
