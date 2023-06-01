@@ -28,6 +28,7 @@ all_close.forEach((ele)=>{
     ele.onclick = ()=>{
         contnet_show.classList.remove('bl-imp');
         my_body.classList.remove('overflow-hidden');
+        pesudo.classList.remove('myoverlay');
         
     }
 });
