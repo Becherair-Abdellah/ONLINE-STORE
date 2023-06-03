@@ -45,4 +45,8 @@
 .l-0{
     @apply left-0 !important;
 }
+.btnclose
+{
+    @apply w-[20px] h-[20px] bg-gray-400 rounded-full flex justify-center items-center font-bold text-white cursor-pointer absolute top-[.5rem] right-[.5rem] lg:hidden;
+}
 @tailwind utilities;
