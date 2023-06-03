@@ -29,11 +29,24 @@ const all_close = document.querySelectorAll('#close');
 console.log(all_close);
 all_close.forEach((ele)=>{
     ele.onclick = ()=>{
-        contnet_show.classList.remove('bl-imp');
+       // for mobile screen and tablet and laptop
+       if(window.innerWidth<1280){
+             contnet_show.classList.remove('bl-imp');
+      }
+       else{
+        setTimeout(()=>{
+            contnet_show.classList.remove('bl-imp');
+           },500);
+       }
         my_body.classList.remove('overflow-hidden');
         pesudo.classList.remove('myoverlay');
         contnet_show.classList.remove('animate');
         
     }
 });
-
+// button show more
+const show_more = document.querySelector('#show-more');
+const profile_contnet = document.querySelector('.pro-file');
+show_more.onclick = ()=>{
+    profile_contnet.classList.add('l-0');
+};
