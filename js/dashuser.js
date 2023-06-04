@@ -81,3 +81,10 @@ if(window.innerHeight<=628){
     console.log('run time');
 }
 };
+// function create tab  content 
+const content = document.querySelector('.content');
+console.log(content);
+dashboard();
+function dashboard(){
+    
+}
