@@ -584,7 +584,7 @@ video {
   left: 0px;
   top: 0px;
   z-index: 11;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: #000000a8;
 }
@@ -801,10 +801,6 @@ video {
   height: 1.5rem;
 }
 
-.h-\[308px\] {
-  height: 308px;
-}
-
 .h-\[30px\] {
   height: 30px;
 }
@@ -910,10 +906,6 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
-}
-
-.overflow-y-visible {
-  overflow-y: visible;
 }
 
 .rounded-\[5px\] {
