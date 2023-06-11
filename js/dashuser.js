@@ -77,7 +77,7 @@ show_more.onclick = () => {
     //setting some changes about screen height 
 if(window.innerHeight<=628){
       
-    document.querySelector('.tools').classList.add('h-[308px]','overflow-hidden','overflow-y-visible');
+    document.querySelector('.tools').classList.add('h-[350px]','overflow-hidden','overflow-y-visible');
     console.log('run time');
 }
 };

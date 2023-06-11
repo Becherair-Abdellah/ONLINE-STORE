@@ -37,7 +37,7 @@
     @apply block !important;
 }
 .myoverlay{
-    @apply bg-[#000000a8] w-full h-[100vh] absolute left-0 top-0 z-[11];
+    @apply bg-[#000000a8] w-full h-[100%] absolute left-0 top-0 z-[11];
 }
 .animate{
     @apply xl:top-[50%] opacity-[1] !important;
