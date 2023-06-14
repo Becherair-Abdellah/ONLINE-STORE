@@ -10,49 +10,8 @@ lis.forEach((ele) => {
 // body here 
 const my_body = document.querySelector('body');
 // show more button in mobile screen
-// pesudo element
-const pesudo = document.querySelector('.pesudo');
-const edits = document.querySelectorAll('#edit');
-const contnet_show = document.querySelector('.myforms');
-edits.forEach((ele) => {
-    ele.onclick = () => {
-        contnet_show.classList.add('bl-imp');
-        my_body.classList.add('overflow-hidden');
-        pesudo.classList.add('myoverlay');
-        setTimeout(() => {
-            contnet_show.classList.add('animate');
-        }, 100);
-        pesudo.onclick = () => {
-            contnet_show.classList.remove('animate');
-            pesudo.classList.remove('myoverlay');
-            setTimeout(() => {
-                contnet_show.classList.remove('bl-imp');
-                my_body.classList.remove('overflow-hidden');
 
-            }, 300);
-        }
-    };
-});
 // close buttons at forms
-const all_close = document.querySelectorAll('#close');
-console.log(all_close);
-all_close.forEach((ele) => {
-    ele.onclick = () => {
-        // for mobile screen and tablet and laptop
-        if (window.innerWidth < 1280) {
-            contnet_show.classList.remove('bl-imp');
-        }
-        else {
-            setTimeout(() => {
-                contnet_show.classList.remove('bl-imp');
-            }, 500);
-        }
-        my_body.classList.remove('overflow-hidden');
-        pesudo.classList.remove('myoverlay');
-        contnet_show.classList.remove('animate');
-
-    }
-});
 // button show more
 const show_more = document.querySelector('#show-more');
 const profile_contnet = document.querySelector('.pro-file');
@@ -83,7 +42,6 @@ show_more.onclick = () => {
 };
 // function create tab  content 
 const content = document.querySelector('.content');
-console.log(content);
 dashboard();
 // dashboard
 function dashboard() {
@@ -330,12 +288,39 @@ function dashboard() {
     info1Div.appendChild(d2Div);
     lastPartDiv.appendChild(d2Div2);
     tab.appendChild(lastPartDiv);
+    // functions 
+    // pesudo element
+    const pesudo = document.querySelector('.pesudo');
+    const edits = document.querySelectorAll('#edit');
+    console.log(edits);
+    edits.forEach((ele) => {
+        ele.onclick = () => {
+            forms();
+
+            document.querySelector('.myforms').classList.add('bl-imp');
+            my_body.classList.add('overflow-hidden');
+            pesudo.classList.add('myoverlay');
+            setTimeout(() => {
+                document.querySelector('.myforms').classList.add('animate');
+            }, 100);
+            pesudo.onclick = () => {
+                document.querySelector('.myforms').classList.remove('animate');
+                pesudo.classList.remove('myoverlay');
+                setTimeout(() => {
+                    document.querySelector('.myforms').classList.remove('bl-imp');
+                    my_body.classList.remove('overflow-hidden');
+
+                }, 300);
+            }
+        };
+    });
 }
 // forms
-forms()
+// forms()
 function forms() {
+    document.querySelector('.myforms') ? document.querySelector('.myforms').remove() : '';
     const myform = document.createElement('div');
-    myform.classList = 'myforms fixed  w-full h-full  left-0 top-0 bg-white px-[1rem] z-[11] xl:w-3/5 xl:h-5/6 xl:top-[48%] xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2 rounded-lg xl:opacity-0';
+    myform.classList = 'myforms fixed hidden  w-full h-full  left-0 top-0 bg-white px-[1rem] z-[11] xl:w-3/5 xl:h-5/6 xl:top-[48%] xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2 rounded-lg xl:opacity-0';
     const div1 = document.createElement('div');
     div1.classList = 'flex items-center justify-between mb-8 py-2';
     const h2div1 = document.createElement('h2');
@@ -445,36 +430,219 @@ function forms() {
     // Append the container div to the document body or any other desired parent element
     formdiv2.appendChild(containerDiv);
     // Create the container div
-for(let i = 0;i<2;i++){
-    var otherDiv = document.createElement('div');
-otherDiv.className = 'relative';
+    for (let i = 0; i < 2; i++) {
+        var otherDiv = document.createElement('div');
+        otherDiv.className = 'relative';
 
-// Create the label element
-var labelElement = document.createElement('label');
-labelElement.setAttribute('for', 'email');
-labelElement.className = 'absolute block text-sm font-medium leading-6 text-gray-900 bg-white left-[15px] top-[-10px] py-0 px-[10px]';
-otherDiv.appendChild(labelElement);
-// Create the input element
-var inputElement = document.createElement('input');
-inputElement.id = 'text';
-inputElement.name = 'text';
-inputElement.type = 'text';
-inputElement.autocomplete = 'email';
-inputElement.required = true;
-inputElement.className = 'block w-full rounded-[5px] border-0 py-3 pl-4 text-[16px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none normal-case';
-inputElement.value = '8424 James Lane South San Francisco';
-const divofinputlast = document.createElement('div');
-divofinputlast.appendChild(inputElement);
-otherDiv.appendChild(divofinputlast);
-formdiv2.appendChild(otherDiv);
-if(i==0){
-    labelElement.textContent = 'Add Address';
-    inputElement.value = '8424 James Lane South San Francisco';
-}
-if(i==1){
-    labelElement.textContent = 'Add Address 2';
-    inputElement.value = 'CA 94080';
-}
-}
+        // Create the label element
+        var labelElement = document.createElement('label');
+        labelElement.setAttribute('for', 'email');
+        labelElement.className = 'absolute block text-sm font-medium leading-6 text-gray-900 bg-white left-[15px] top-[-10px] py-0 px-[10px]';
+        otherDiv.appendChild(labelElement);
+        // Create the input element
+        var inputElement = document.createElement('input');
+        inputElement.id = 'text';
+        inputElement.name = 'text';
+        inputElement.type = 'text';
+        inputElement.autocomplete = 'email';
+        inputElement.required = true;
+        inputElement.className = 'block w-full rounded-[5px] border-0 py-3 pl-4 text-[16px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 outline-none normal-case';
+        inputElement.value = '8424 James Lane South San Francisco';
+        const divofinputlast = document.createElement('div');
+        divofinputlast.appendChild(inputElement);
+        otherDiv.appendChild(divofinputlast);
+        formdiv2.appendChild(otherDiv);
+        if (i == 0) {
+            labelElement.textContent = 'Add Address';
+            inputElement.value = '8424 James Lane South San Francisco';
+        }
+        if (i == 1) {
+            labelElement.textContent = 'Add Address 2';
+            inputElement.value = 'CA 94080';
+        }
+    }
 
+    // Create the outer div with the "flex justify-between items-center gap-5" classes
+    const divOuter = document.createElement('div');
+    divOuter.classList.add('flex', 'justify-between', 'items-center', 'gap-5');
+
+    // Create the first inner div
+    const mydiv1 = document.createElement('div');
+    mydiv1.classList.add('relative', 'w-full');
+
+    // Create the label for the first select element
+    const label1 = document.createElement('label');
+    label1.setAttribute('for', 'email');
+    label1.classList.add('absolute', 'block', 'text-sm', 'font-medium', 'leading-6', 'text-gray-900', 'bg-white', 'left-[15px]', 'top-[-4px]', 'py-0', 'px-[10px]');
+    label1.textContent = 'Country';
+
+    // Create the div for the first select element
+    const divSelect1 = document.createElement('div');
+    divSelect1.classList.add('mt-2');
+
+    // Create the first select element
+    const select1 = document.createElement('select');
+    select1.classList.add('block', 'w-full', 'rounded-[5px]', 'border-0', 'py-3', 'pl-4', 'text-[16px]', 'text-gray-900', 'shadow-sm', 'ring-1', 'ring-inset', 'ring-gray-300', 'outline-none', 'bg-transparent');
+    select1.setAttribute('name', 'select');
+    select1.setAttribute('id', 'select');
+
+    // Create option elements for the first select element
+    const option1 = document.createElement('option');
+    option1.setAttribute('value', '');
+    option1.textContent = 'algeria';
+
+    // Repeat the above steps to create the remaining options
+
+    // Append the options to the select element
+    select1.appendChild(option1);
+
+    // Append the select element to the div for the select element
+    divSelect1.appendChild(select1);
+
+    // Append the label and the div for the select element to the first inner div
+    mydiv1.appendChild(label1);
+    mydiv1.appendChild(divSelect1);
+
+    // Create the second inner div and its contents (label and select element) using the same approach as above
+    const mydiv2 = document.createElement('div');
+    mydiv2.classList.add('relative', 'w-full');
+
+    const label2 = document.createElement('label');
+    label2.setAttribute('for', 'email');
+    label2.classList.add('absolute', 'block', 'text-sm', 'font-medium', 'leading-6', 'text-gray-900', 'bg-white', 'left-[15px]', 'top-[-4px]', 'py-0', 'px-[10px]');
+    label2.textContent = 'City';
+
+    const divSelect2 = document.createElement('div');
+    divSelect2.classList.add('mt-2');
+
+    const select2 = document.createElement('select');
+    select2.classList.add('block', 'w-full', 'rounded-[5px]', 'border-0', 'py-3', 'pl-4', 'text-[16px]', 'text-gray-900', 'shadow-sm', 'ring-1', 'ring-inset', 'ring-gray-300', 'outline-none', 'bg-transparent');
+    select2.setAttribute('name', 'select');
+    select2.setAttribute('id', 'select');
+
+    // Create option elements for the second select element
+    const option2 = document.createElement('option');
+    option2.setAttribute('value', '');
+    option2.textContent = 'algeria';
+
+    // Repeat the above steps to create the remaining options
+
+    // Append the options to the select element
+    select2.appendChild(option2);
+
+    // Append the select element to the div for the select element
+    divSelect2.appendChild(select2);
+
+    // Append the label and the div for the select element to the second inner div
+    mydiv2.appendChild(label2);
+    mydiv2.appendChild(divSelect2);
+
+    // Create the third inner div and its contents (label and select element) using the same approach as above
+    const div3 = document.createElement('div');
+    div3.classList.add('relative', 'w-full');
+
+    const label3 = document.createElement('label');
+    label3.setAttribute('for', 'email');
+    label3.classList.add('absolute', 'block', 'text-sm', 'font-medium', 'leading-6', 'text-gray-900', 'bg-white', 'left-[15px]', 'top-[-4px]', 'py-0', 'px-[10px]');
+    label3.textContent = 'Pin Code';
+
+    const divSelect3 = document.createElement('div');
+    divSelect3.classList.add('mt-2');
+
+    const select3 = document.createElement('select');
+    select3.classList.add('block', 'w-full', 'rounded-[5px]', 'border-0', 'py-3', 'pl-4', 'text-[16px]', 'text-gray-900', 'shadow-sm', 'ring-1', 'ring-inset', 'ring-gray-300', 'outline-none', 'bg-transparent');
+    select3.setAttribute('name', 'select');
+    select3.setAttribute('id', 'select');
+
+    // Create option elements for the third select element
+    const option3 = document.createElement('option');
+    option3.setAttribute('value', '');
+    option3.textContent = 'algeria';
+
+    // Repeat the above steps to create the remaining options
+
+    // Append the options to the select element
+    select3.appendChild(option3);
+
+    // Append the select element to the div for the select element
+    divSelect3.appendChild(select3);
+
+    // Append the label and the div for the select element to the third inner div
+    div3.appendChild(label3);
+    div3.appendChild(divSelect3);
+
+    // Append all the inner divs to the outer div
+    divOuter.appendChild(mydiv1);
+    divOuter.appendChild(mydiv2);
+    divOuter.appendChild(div3);
+
+    // Append the outer div to the desired parent element in the DOM
+    // const parentElement = document.querySelector('your-parent-element-selector');
+    formdiv2.appendChild(divOuter);
+
+    // Create the outer div with the "flex justify-end absolute bottom-[1rem] right-[1rem]" classes
+    const divOuter1 = document.createElement('div');
+    divOuter1.classList.add('flex', 'justify-end', 'absolute', 'bottom-[1rem]', 'right-[1rem]');
+
+    // Create the first inner div
+    const div1_1 = document.createElement('div');
+    div1_1.classList.add('mr-2');
+
+    // Create the span element for "Close" button
+    const closeBtn = document.createElement('span');
+    closeBtn.setAttribute('id', 'close');
+    closeBtn.classList.add('btn', 'text-md', 'px-5', 'b-t', 'flex', 'justify-center', 'items-center', 'h-[30px]');
+    closeBtn.textContent = 'Close';
+
+    // Append the "Close" button span element to the first inner div
+    div1_1.appendChild(closeBtn);
+
+    // Create the second inner div
+    const div2_1 = document.createElement('div');
+    div2_1.classList.add('flex');
+
+    // Create the button element for "Save changes"
+    const saveBtn = document.createElement('button');
+    saveBtn.setAttribute('type', 'submit');
+    saveBtn.setAttribute('id', 'save');
+    saveBtn.classList.add('items-center', 'text-white', 'font-bold', 'text-[16px]', 'px-9', 'bg-[#0da487]', 'rounded-md');
+    saveBtn.textContent = 'Save changes';
+
+    // Append the "Save changes" button element to the second inner div
+    div2_1.appendChild(saveBtn);
+
+    // Append both inner divs to the outer div
+    divOuter1.appendChild(div1_1);
+    divOuter1.appendChild(div2_1);
+
+    // // Append the outer div to the desired parent element in the DOM
+    // const parentElement = document.querySelector('your-parent-element-selector');
+    // parentElement.appendChild(divOuter);
+
+    formdiv2.appendChild(divOuter1);
+
+    const all_close = document.querySelectorAll('#close');
+    console.log(all_close);
+    all_close.forEach((ele) => {
+        ele.onclick = () => {
+            // for mobile screen and tablet and laptop
+            if (window.innerWidth < 1280) {
+                document.querySelector('.myforms').classList.remove('bl-imp');
+                setTimeout(() => {
+                    myform.remove();
+                }, 500);
+            }
+            else {
+                setTimeout(() => {
+                    document.querySelector('.myforms').classList.remove('bl-imp');
+                    myform.remove();
+
+                }, 500);
+            }
+            my_body.classList.remove('overflow-hidden');
+            document.querySelector('.pesudo').classList.remove('myoverlay');
+            document.querySelector('.myforms').classList.remove('animate');
+
+        }
+    });
 };
