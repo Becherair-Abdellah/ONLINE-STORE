@@ -15,6 +15,7 @@ const my_body = document.querySelector('body');
 // button show more
 const show_more = document.querySelector('#show-more');
 const profile_contnet = document.querySelector('.pro-file');
+const pesudo = document.querySelector('.pesudo');
 show_more.onclick = () => {
     profile_contnet.classList.add('l-0');
     my_body.classList.add('overflow-hidden');
@@ -31,6 +32,8 @@ show_more.onclick = () => {
             my_body.classList.remove('overflow-hidden');
             pesudo.classList.remove('myoverlay');
             profile_contnet.classList.remove('l-0');
+            // document.querySelector('.myforms')?document.querySelector('.myforms').remove():'';
+            console.log('set time');
         }
     });
     //setting some changes about screen height 
@@ -290,9 +293,8 @@ function dashboard() {
     tab.appendChild(lastPartDiv);
     // functions 
     // pesudo element
-    const pesudo = document.querySelector('.pesudo');
+
     const edits = document.querySelectorAll('#edit');
-    console.log(edits);
     edits.forEach((ele) => {
         ele.onclick = () => {
             forms();
@@ -622,7 +624,6 @@ function forms() {
     formdiv2.appendChild(divOuter1);
 
     const all_close = document.querySelectorAll('#close');
-    console.log(all_close);
     all_close.forEach((ele) => {
         ele.onclick = () => {
             // for mobile screen and tablet and laptop
